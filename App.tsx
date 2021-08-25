@@ -5,18 +5,16 @@ import { View, StyleSheet } from 'react-native';
 import { FooterMenu } from './src/components/footerMenu';
 
 export default function App() {
-  return (      
+  return (     
     
     <View style={styles.container} >
             <UserMenu/>    
             <FooterMenu/>
-    </View>   
- 
+    </View>    
   );
 }
-
 const styles = StyleSheet.create({
 container: {
-  flex: 2
+  flex: 1
 }
 });
