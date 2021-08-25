@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
-
+const rotate = 5;
 export const styles = StyleSheet.create({
     container:{
         width: '100%',
@@ -10,12 +10,12 @@ export const styles = StyleSheet.create({
         paddingTop: 15      
     },
     leftMenu:{   
-        transform: [{ rotate: '8deg'}],
+        transform: [{ rotate: `${rotate}deg`}],
         paddingLeft: 25,
         paddingTop: 10  
     },
     rightMenu:{   
-        transform: [{ rotate: '-8deg'}],
+        transform: [{ rotate: `-${rotate}deg`}],
         paddingLeft: 60,
         paddingTop: 10                    
     },
@@ -25,10 +25,10 @@ export const styles = StyleSheet.create({
         width: 30        
     },
     iconConfig:{     
-        transform: [{ rotate: '-8deg'}]        
+        transform: [{ rotate: `-${rotate}deg`}]        
     },
     iconRight:{
-        transform: [{ rotate: '8deg'}]  
+        transform: [{ rotate: `${rotate}deg`}]  
     },
     iconsContainer:{        
         flexDirection: 'row',    
@@ -41,15 +41,15 @@ export const styles = StyleSheet.create({
     },
     iconCenterContainer:{   
         flexDirection: 'row',
-        width: 80,
-        height: 80,          
+        width: 70,
+        height: 70,          
         backgroundColor: theme.colors.backgroundButton,
         borderRadius: 100,
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        marginTop: 15,
-        paddingBottom: 10                    
+        marginTop: 0,
+        paddingBottom: 0                    
     },
     iconCenter:{  
        width: 40,
