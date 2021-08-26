@@ -3,18 +3,26 @@ import { SignIn } from './src/screens/signin';
 import { UserMenu } from './src/screens/userMenu';
 import { View, StyleSheet } from 'react-native';
 import { FooterMenu } from './src/components/footerMenu';
+import { ProfileSuggest } from './src/screens/profileSuggest';
+
 
 export default function App() {
-  return (     
-    
+  return (
+
     <View style={styles.container} >
-            <UserMenu/>    
-            <FooterMenu/>
-    </View>    
+      <ProfileSuggest />
+      <View style={styles.footerMenu}>
+        <FooterMenu />
+      </View>
+    </View>
   );
 }
 const styles = StyleSheet.create({
-container: {
-  flex: 1
-}
+  container: {
+    flex: 1,
+    justifyContent: 'flex-end'
+  },
+  footerMenu: {
+    position: 'absolute'
+  }
 });

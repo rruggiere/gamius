@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
         height: 90,      
         flexDirection: 'row',
         justifyContent: 'center',
-        paddingBottom: 25          
+        paddingBottom: 25,
+        backgroundColor: 'transparent'          
     },
     iconsContainer:{
         marginTop: 35,
@@ -17,7 +18,7 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.background.main,
         borderRadius: 130,
         flexDirection:'row',
-        paddingBottom: 13
+        paddingBottom: 13        
     },
     leftIcons:{             
         width: '50%',              
@@ -36,10 +37,10 @@ export const styles = StyleSheet.create({
         height: 30,
         marginHorizontal: 25      
     },
-    iconCenter:{  
+    iconCenterContainer:{  
         marginTop: 1,
-        width: 70,
-        height: 70,
+        width: 80,
+        height: 80,
         position: 'absolute',
         alignItems: 'center',
         justifyContent: 'center',
@@ -47,5 +48,10 @@ export const styles = StyleSheet.create({
         borderWidth: 3.5,
         borderRadius: 100,
         borderColor: theme.colors.background.secondary         
-    }     
+    },     
+    iconCenter:{
+        width: 45,
+        height: 45,
+        marginHorizontal: 25  
+    }
 });

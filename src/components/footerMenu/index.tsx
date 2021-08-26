@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import { styles } from './styles';
 import userWhite from '../../assets/userWhite.png'
-import gamePad from '../../assets/gamePad.png'
+import gamePad from '../../assets/two-players.png'
 import message from '../../assets/message.png'
 import logout from '../../assets/logout.png'
 
@@ -22,8 +22,8 @@ export function FooterMenu() {
                     <Image style={styles.icon} source={logout} />
                 </View>               
             </View>
-            <View style={styles.iconCenter}>
-                    <Image style={styles.icon} source={gamePad} />
+            <View style={styles.iconCenterContainer}>
+                    <Image style={styles.iconCenter} source={gamePad} />
                 </View>
         </View>
     );
