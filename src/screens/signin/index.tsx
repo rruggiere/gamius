@@ -10,7 +10,6 @@ import { styles } from './styles';
 import logoGamiusImg from '../../../assets/splash.png';
 
 export default function SignIn({ navigation }:any) {
-
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>

@@ -8,12 +8,12 @@ import {
 import { styles } from './styles';
 import { ButtonMenu } from '../../components/ButtonMenu';
 
-//Image
 import userDefault from '../../assets/userDefault.png'
 import settingsIcon from '../../assets/settings.png'
 import editProfile from '../../assets/edit.png'
 import shareApp from '../../assets/share.png'
 import logout from '../../assets/logout.png'
+import { FooterMenu } from '../../components/footerMenu';
 
 
 export default function UserMenu({ navigation }:any) {

@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
         borderColor: theme.colors.backgroundButton,
         backgroundColor: theme.colors.background.secondary,
         width: '100%',
-        height: '100%',
+        height: '80%',
         marginTop: 30,         
         paddingTop: 25,
         paddingHorizontal: 15        

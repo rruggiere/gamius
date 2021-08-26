@@ -44,10 +44,9 @@ export const styles = StyleSheet.create({
     signinButton: {        
         alignItems: "center",
         backgroundColor: theme.colors.backgroundButton,
-        padding: 10,
+        paddingVertical: 2,
         borderRadius: 8,
-        width: '50%',
-        height: 40,
+        width: '50%',     
         justifyContent: 'center'       
     },
     forgtPassword:{
