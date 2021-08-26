@@ -85,7 +85,8 @@ export const styles = StyleSheet.create({
     hourInfo:{   
       paddingTop: 4, 
       marginLeft: 7,
-      color: theme.colors.heading.secondary
+      color: theme.colors.heading.secondary,
+      fontStyle: 'italic'
     },
     playerBio:{
         marginTop: 20,
