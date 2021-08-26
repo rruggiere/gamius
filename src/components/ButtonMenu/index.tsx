@@ -16,7 +16,8 @@ type Props = ImageProps & TouchableOpacityProps & {
 export function ButtonMenu({ title, ...rest }: Props) {
     return (
         <TouchableOpacity style={styles.baseMenuButton} 
-        activeOpacity={0.7}>
+        activeOpacity={0.7}
+        {...rest}>
             <View style={styles.menuIconContainer}>
                 <Image style={styles.menuIcon} {...rest} />
             </View>
