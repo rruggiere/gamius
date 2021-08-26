@@ -2,7 +2,7 @@ export const theme = {
     colors: {
         background: {
             main: "#191A1E",
-            secondary: '#171616'
+            secondary: 'black'
         }, 
         heading: {
             main: "#DEDEDE",
