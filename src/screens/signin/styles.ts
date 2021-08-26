@@ -5,11 +5,9 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: theme.colors.background.main,
-        alignItems: "center"
-    },
-    logoContainer: {
-        marginTop: 70
-    },
+        alignItems: "center",
+        justifyContent: 'center'
+    },   
     image: {
         width: 100,
         height: 100
@@ -28,8 +26,7 @@ export const styles = StyleSheet.create({
         paddingLeft: 15    
     },
     siginInputs: {
-        width: '90%',
-        margin: 30
+        width: '90%'     
     },
     containerTextInput: {
         borderRadius: 11,
