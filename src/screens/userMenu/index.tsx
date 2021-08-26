@@ -8,6 +8,7 @@ import {
 import { styles } from './styles';
 import { ButtonMenu } from '../../components/ButtonMenu';
 
+//Image
 import userDefault from '../../assets/userDefault.png'
 import settingsIcon from '../../assets/settings.png'
 import editProfile from '../../assets/edit.png'
@@ -15,7 +16,7 @@ import shareApp from '../../assets/share.png'
 import logout from '../../assets/logout.png'
 
 
-export function UserMenu() {
+export default function UserMenu({ navigation }:any) {
     return (
         <View style={styles.container}>
                <StatusBar
@@ -44,6 +45,7 @@ export function UserMenu() {
                  <ButtonMenu
                     title="log out"
                     source={logout}
+                    onPress = {() => navigation.navigate('SignIn')}
                 />
             </View>
         </View>

@@ -7,8 +7,10 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { styles } from './styles';
-import logoGamiusImg from '../../../assets/splash.png'
-export function SignIn() {
+import logoGamiusImg from '../../../assets/splash.png';
+
+export default function SignIn({ navigation }:any) {
+
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
@@ -24,7 +26,7 @@ export function SignIn() {
         </View>
         <View style={ styles.signinActions }>
           <Text style={styles.forgtPassword}> Forgot password?</Text>
-          <TouchableOpacity style={ styles.signinButton }>
+          <TouchableOpacity style={ styles.signinButton } onPress={() => navigation.navigate('UserMenu')}>
              <Text style={styles.textInput}>SIGN IN</Text> 
             </TouchableOpacity>
         </View>

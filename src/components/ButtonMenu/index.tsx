@@ -4,11 +4,12 @@ import {
     Text,
     Image,
     TouchableOpacity,
-    ImageProps
+    ImageProps,
+    TouchableOpacityProps
 } from 'react-native';
 import { styles } from './styles';
 
-type Props = ImageProps & {
+type Props = ImageProps & TouchableOpacityProps & {
     title: string;
 }
 

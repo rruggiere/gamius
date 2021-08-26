@@ -1,22 +1,16 @@
 import React from 'react';
-import { SignIn } from './src/screens/signin';
-import { UserMenu } from './src/screens/userMenu';
-import { View, StyleSheet } from 'react-native';
-import { FooterMenu } from './src/components/footerMenu';
+import { NavigationContainer } from '@react-navigation/native';
+import {StatusBar} from 'react-native';
+import { Platform } from 'react-native'
+import Routes from './src/screens/routes';
+
+const type = { base: (Platform.OS === 'ios' ? 'Helvetica Neue' : 'sans-serif'), bold: (Platform.OS === 'ios' ? 'HelveticaNeue-Bold' : 'arial'), emphasis: (Platform.OS === 'ios' ? 'HelveticaNeue-Italic' : 'sans-serif') }
 
 export default function App() {
   return (      
-    
-    <View style={styles.container} >
-            <UserMenu/>    
-            <FooterMenu/>
-    </View>   
- 
+    <NavigationContainer>
+      <StatusBar barStyle="light-content"/>
+        <Routes />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-container: {
-  flex: 2
-}
-});
