@@ -8,6 +8,9 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center'
     },   
+    logoContainer:{
+        height: '23%'      
+    },
     image: {
         width: 100,
         height: 100
@@ -26,7 +29,7 @@ export const styles = StyleSheet.create({
         paddingLeft: 15    
     },
     siginInputs: {
-        width: '90%'     
+        width: '90%'    
     },
     containerTextInput: {
         borderRadius: 11,
@@ -55,7 +58,7 @@ export const styles = StyleSheet.create({
         fontSize: 15             
     }, 
     containerSignUp:{
-      marginTop: 20,
+      marginTop: 35,
       flexDirection: 'row',
       justifyContent: 'center'     
     },

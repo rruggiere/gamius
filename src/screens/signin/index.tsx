@@ -12,7 +12,7 @@ import logoGamiusImg from '../../../assets/splash.png';
 export default function SignIn({ navigation }:any) {
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.logoContainer}>
         <Image style={styles.image} source={logoGamiusImg} />
         <Text style={styles.text}>GAMIUS</Text>
       </View>
