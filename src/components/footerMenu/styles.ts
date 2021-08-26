@@ -1,58 +1,57 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
-const rotate = 5;
+
 export const styles = StyleSheet.create({
-    container:{
+    container:{ 
         width: '100%',
-        height: 70,
-        justifyContent:'center',     
+        height: 90,      
         flexDirection: 'row',
-        paddingTop: 15      
+        justifyContent: 'center',
+        paddingBottom: 25,
+        backgroundColor: 'transparent'          
     },
-    leftMenu:{   
-        transform: [{ rotate: `${rotate}deg`}],
-        paddingLeft: 25,
-        paddingTop: 10  
+    iconsContainer:{
+        marginTop: 35,
+        height: 70,
+        justifyContent: 'center',
+        alignItems: 'center',   
+        backgroundColor: theme.colors.background.main,
+        borderRadius: 130,
+        flexDirection:'row',
+        paddingBottom: 13        
     },
-    rightMenu:{   
-        transform: [{ rotate: `-${rotate}deg`}],
-        paddingLeft: 60,
-        paddingTop: 10                    
+    leftIcons:{             
+        width: '50%',              
+        flexDirection: 'row',   
+        justifyContent:'center',
+        paddingRight: 15         
+    },
+    rightIcons:{       
+        width: '50%',               
+        flexDirection: 'row',
+        justifyContent:'center',
+        paddingLeft: 15      
     },
     icon:{
-        marginHorizontal: 18,
+        width: 30,
         height: 30,
-        width: 30        
+        marginHorizontal: 25      
     },
-    iconConfig:{     
-        transform: [{ rotate: `-${rotate}deg`}]        
-    },
-    iconRight:{
-        transform: [{ rotate: `${rotate}deg`}]  
-    },
-    iconsContainer:{        
-        flexDirection: 'row',    
+    iconCenterContainer:{  
+        marginTop: 1,
+        width: 80,
         height: 80,
-        width: '55%',          
-        backgroundColor: theme.colors.background.main,
-        borderTopWidth: 1,
-        borderTopColor: theme.colors.backgroundButton,
-        overflow:'hidden'  
-    },
-    iconCenterContainer:{   
-        flexDirection: 'row',
-        width: 70,
-        height: 70,          
-        backgroundColor: theme.colors.backgroundButton,
-        borderRadius: 100,
-        justifyContent: 'center',
-        alignItems: 'center',
         position: 'absolute',
-        marginTop: 0,
-        paddingBottom: 0                    
-    },
-    iconCenter:{  
-       width: 40,
-       height: 40
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: theme.colors.background.main,
+        borderWidth: 3.5,
+        borderRadius: 100,
+        borderColor: theme.colors.background.secondary         
+    },     
+    iconCenter:{
+        width: 45,
+        height: 45,
+        marginHorizontal: 25  
     }
 });

@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { styles } from './styles';
 import logoGamiusImg from '../../../assets/splash.png'
+
 export function SignIn() {
   return (
     <View style={styles.container}>
