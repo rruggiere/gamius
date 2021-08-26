@@ -17,12 +17,15 @@ export const styles = StyleSheet.create({
     text: {
         color: theme.colors.heading.main,
         fontSize: 27,
-        fontFamily: 'sans-serif-condensed',
         fontWeight: 'bold'
     },
     textInput: {
         color: theme.colors.heading.main,
-        paddingLeft: 15             
+        padding: 10             
+    },
+    textLogin:{
+        color: theme.colors.heading.main,
+        paddingLeft: 15    
     },
     siginInputs: {
         width: '90%',

@@ -18,10 +18,10 @@ export default function SignIn({ navigation }:any) {
       </View>
       <View style={styles.siginInputs}>
         <View style={styles.containerTextInput}>
-          <TextInput style={styles.textInput}>USER</TextInput>
+          <TextInput style={styles.textLogin}>USER</TextInput>
         </View>
         <View style={styles.containerTextInput}>
-          <TextInput style={styles.textInput}>PASSWORD</TextInput>
+          <TextInput style={styles.textLogin}>PASSWORD</TextInput>
         </View>
         <View style={ styles.signinActions }>
           <Text style={styles.forgtPassword}> Forgot password?</Text>
