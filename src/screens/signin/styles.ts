@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
     },
     textInput: {
         color: theme.colors.heading.main,
-        padding: 11
+        paddingLeft: 15             
     },
     siginInputs: {
         width: '90%',
@@ -32,7 +32,8 @@ export const styles = StyleSheet.create({
         borderRadius: 11,
         height: 50,
         backgroundColor: theme.colors.background.secondary,
-        marginTop: 18
+        marginTop: 18,
+        justifyContent: 'center'
     },
     signinActions: {
       marginTop: 25,
