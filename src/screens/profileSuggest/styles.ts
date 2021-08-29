@@ -9,12 +9,13 @@ export const styles = StyleSheet.create({
         height: '100%',
     },
     moreOptions:{
-     paddingTop: 25,
+     paddingTop: 35,
      paddingRight: 25,
      width: '100%',
+     height: '5%',
      justifyContent: 'flex-start',
      alignContent: 'flex-end',   
-     flexDirection: 'column'
+     flexDirection: 'column'    
     },
     moreOptionsIcon:{
         width: 20,
@@ -23,7 +24,7 @@ export const styles = StyleSheet.create({
     },
     playerGameInfo:{
         width: '100%',
-        height:'40%',
+        height:'30%',
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 5
@@ -51,7 +52,7 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.background.secondary,      
         borderRadius: 45,
         width: '100%',
-        height:'60%',       
+        height:'65%',       
         alignItems: 'center'       
     },   
     lanesContainer:{
