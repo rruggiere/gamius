@@ -2,56 +2,38 @@ import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
-    container:{ 
-        width: '100%',
-        height: 90,      
+
+    iconsContainer:{        
+        height: 55,
         flexDirection: 'row',
-        justifyContent: 'center',
-        paddingBottom: 25,
-        backgroundColor: 'transparent'          
-    },
-    iconsContainer:{
-        marginTop: 35,
-        height: 70,
-        justifyContent: 'center',
-        alignItems: 'center',   
         backgroundColor: theme.colors.background.main,
-        borderRadius: 130,
-        flexDirection:'row',
-        paddingBottom: 13        
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignContent: 'center', 
+        marginTop: -500
     },
-    leftIcons:{             
-        width: '50%',              
-        flexDirection: 'row',   
-        justifyContent:'center',
-        paddingRight: 15         
+    menuButton:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-    rightIcons:{       
-        width: '50%',               
-        flexDirection: 'row',
-        justifyContent:'center',
-        paddingLeft: 15      
+    buttonCenter:{
+        width: 75,
+        height: 75,     
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: theme.colors.background.main,
+        borderRadius: 37.5,
+        borderWidth: 2,
+        borderColor: theme.colors.background.secondary,
+        marginTop: -30
     },
     icon:{
         width: 30,
-        height: 30,
-        marginHorizontal: 25      
-    },
-    iconCenterContainer:{  
-        marginTop: 1,
-        width: 80,
-        height: 80,
-        position: 'absolute',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: theme.colors.background.main,
-        borderWidth: 3.5,
-        borderRadius: 100,
-        borderColor: theme.colors.background.secondary         
+        height: 30,     
     },     
     iconCenter:{
-        width: 45,
-        height: 45,
-        marginHorizontal: 25  
+        width: 50,
+        height: 50
     }
 });
