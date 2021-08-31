@@ -5,48 +5,44 @@ import {
     TouchableOpacity
 } from 'react-native';
 import { styles } from './styles';
-import userWhite from '../../assets/userWhite.png'
-import gamePad from '../../assets/two-players.png'
-import message from '../../assets/message.png'
-import logout from '../../assets/logout.png'
+import userWhite from '../../assets/userWhite.png';
+import twoGamepad from '../../assets/two-players.png';
+import gamePad from '../../assets/gamePad.png';
+import message from '../../assets/message.png';
+import logout from '../../assets/logout.png';
 
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from '../../screens/RootStackPrams';
-
-type authScreenProp = StackNavigationProp<RootStackParamList, 'FooterMenu'>;
-
-export function FooterMenu({navigationA}: any) {
-    const navigation = useNavigation<authScreenProp>();
+export function FooterMenu({ state, navigation }: any) {  
     const goTo = (screenName: string) => {
-        navigation.navigate('SignIn');
+        navigation.navigate(screenName);
     }
     return (
         <View style={styles.iconsContainer}>
             <TouchableOpacity
                 onPress={() => goTo('UserMenu')}
+                activeOpacity={0.7}
                 style={styles.menuButton}>
-                <Image style={styles.icon} source={userWhite} />
+                <Image style={[styles.icon, {opacity : state.index === 1? 1 : 0.5}]} source={userWhite} />
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('NotImplemented')}
                 style={styles.menuButton}>
-                <Image style={styles.icon} source={gamePad} />
+                <Image style={[styles.icon, {opacity : state.index === 2? 1 : 0.5}]} source={gamePad} />
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('ProfileSuggest')}
+                activeOpacity={0.9}
                 style={styles.buttonCenter}>
-                <Image style={styles.iconCenter} source={gamePad} />
+                <Image style={[styles.iconCenter, {opacity : state.index === 0? 1 : 0.5}]} source={twoGamepad} />
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => goTo('UserMenu')}
+                onPress={() => goTo('NotImplemented')}               
                 style={styles.menuButton}>
-                <Image style={styles.icon} source={message} />
+                <Image style={[styles.icon, {opacity : state.index === 3? 1 : 0.5}]} source={message} />
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => goTo('UserMenu')}
+                onPress={() => goTo('NotImplemented')}
                 style={styles.menuButton}>
-                <Image style={styles.icon} source={logout} />
+                <Image style={[styles.icon, {opacity : state.index === 4? 1 : 0.5}]} source={logout} />
             </TouchableOpacity>
         </View>
     );

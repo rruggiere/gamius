@@ -3,10 +3,12 @@ import {
     Text,
     View,
     Image,
-    TextInput,
     TouchableOpacity
 } from 'react-native';
 import { styles } from './styles';
+import { useNavigation } from '@react-navigation/native';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { RootTabParamList } from '../../stacks/MainTab/rootTabParams';
 
 import diamondPic from '../../assets/diamond.png';
 import midIcon from '../../assets/middleLane.png';
@@ -16,12 +18,16 @@ import likeIcon from '../../assets/gamePad.png';
 import hourIcon from '../../assets/clock.png';
 import moreOptions from '../../assets/more-options.png';
 
+type ProfileSuggestProps = BottomTabNavigationProp<RootTabParamList, 'ProfileSuggest'>
+
 export function ProfileSuggest() {
+    const navigation = useNavigation<ProfileSuggestProps>();
+
     return (
-        <View style={styles.container}>           
-            <TouchableOpacity  style={styles.moreOptions}>
-            <Image style={styles.moreOptionsIcon} source={moreOptions} />
-            </TouchableOpacity>       
+        <View style={styles.container}>
+            <TouchableOpacity style={styles.moreOptions}>
+                <Image style={styles.moreOptionsIcon} source={moreOptions} />
+            </TouchableOpacity>
             <View style={styles.playerGameInfo}>
                 <View style={styles.eloContainer}>
                     <Image style={styles.eloIcon} source={diamondPic} />

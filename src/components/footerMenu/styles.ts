@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
-
     iconsContainer:{        
         height: 55,
         flexDirection: 'row',
@@ -30,10 +29,12 @@ export const styles = StyleSheet.create({
     },
     icon:{
         width: 30,
-        height: 30,     
+        height: 30,    
+        opacity: 0.5 
     },     
     iconCenter:{
         width: 50,
-        height: 50
-    }
+        height: 50,
+        opacity: 0.5 
+    }  
 });
