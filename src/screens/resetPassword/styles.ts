@@ -6,16 +6,10 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: theme.colors.background.main,
         alignItems: "center",
-        justifyContent: 'center'
+        paddingTop: '5%'
     },   
-    logoContainer:{
-        height: '20%'
-    },
-    image: {
-        width: 300,
-        height: 100,
-        flex: 1,
-        resizeMode: 'contain'
+    resetPassword:{
+        height: '10%'      
     },
     text: {
         color: theme.colors.heading.main,
@@ -26,49 +20,45 @@ export const styles = StyleSheet.create({
         color: theme.colors.heading.main,
         padding: 10             
     },
-    textLogin:{
+    textInsideInput:{
         color: theme.colors.heading.main,
-        paddingLeft: 20    
+        width: '80%'
     },
-    siginInputs: {
-        width: '90%',
-        marginTop: '10%'
+    textInsideInputIcon:{
+        color: theme.colors.heading.main,
+        width: '75%'
+    },
+    resetPasswordInputs: {
+        paddingTop: '10%',
+        width: '90%'    
     },
     containerTextInput: {
         borderRadius: 11,
         height: 50,
         backgroundColor: theme.colors.background.secondary,
         marginTop: 18,
-        // justifyContent: 'center',
+        justifyContent: 'center',
         flexDirection: 'row',
         alignItems: 'center'
     },
-    signinActions: {
-      marginTop: 25,
+    resetPasswordActions: {
+      marginTop: '20%',
       width: '100%',
       flexDirection: 'row',
       justifyContent: 'space-around',
       alignItems: 'center'      
     },
-    signinButton: {        
+    resetPasswordButton: {        
         alignItems: "center",
         backgroundColor: theme.colors.backgroundButton,
-        paddingVertical: 2,
+        paddingVertical: 4,
         borderRadius: 8,
-        width: '50%',     
+        width: '100%',     
         justifyContent: 'center'       
     },
-    forgtPassword:{
-        color: theme.colors.heading.secondary,
-        fontSize: 15             
-    }, 
-    containerSignUp:{
-      marginTop: '20%',
+    containerInfo:{
       flexDirection: 'row',
       justifyContent: 'center'     
-    },
-    signInText:{
-        color: theme.colors.heading.main
     },
     iconTextInput: {
         flex: 1,
@@ -78,9 +68,8 @@ export const styles = StyleSheet.create({
         color: '#6f7075',
         fontSize: 20
     },
-    textInsideInputIcon:{
-        color: theme.colors.heading.main,
-        width: '85%',
-        paddingLeft: 20    
-    }
+    textInfo:{
+        color: theme.colors.heading.secondary,
+        fontSize: 15             
+    }, 
 })

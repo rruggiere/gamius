@@ -8,6 +8,7 @@ export const theme = {
             main: "#DEDEDE",
             secondary: "#6F7075"
         },
-        backgroundButton: '#fc244d'        
+        backgroundButton: '#fc244d',
+        textInfo: '#fd8925'        
     }
 }
