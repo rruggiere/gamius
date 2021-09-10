@@ -2,115 +2,127 @@ import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        backgroundColor:  theme.colors.background.main,
+    container: {        
+        backgroundColor: theme.colors.background.secondary,
         width: '100%',
         height: '100%',
+        alignItems: 'center'                     
     },
-    moreOptions:{
-     paddingTop: 35,
-     paddingRight: 25,
-     width: '100%',
-     height: '5%',
-     justifyContent: 'flex-start',
-     alignContent: 'flex-end',   
-     flexDirection: 'column'    
+      moreOptions: {
+        paddingTop: 35,
+        paddingRight: 25,
+        width: '100%',
+        height: '1%',        
+        flexDirection: 'column'
     },
-    moreOptionsIcon:{
+    gradientContainer: {
+        marginTop: 59,       
+        borderRadius: 18,
+        width: '90%',
+        height: '53%',        
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    cardContainer: {   
+        backgroundColor: theme.colors.background.main,     
+        borderRadius: 20,
+        width: '97.8%',
+        height: '99%',        
+        justifyContent: 'center',
+        overflow: 'hidden'
+    },  
+    moreOptionsIcon: {
         width: 20,
         height: 20,
-        alignSelf: 'flex-end' 
+        alignSelf: 'flex-end'
     },
-    playerGameInfo:{
+    playerGameInfo: {
         width: '100%',
-        height:'30%',
+        height: '48%',
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 5
+        marginBottom: 5  
     },
-    eloContainer:{
+    eloContainer: {
         marginVertical: 10,
         justifyContent: 'center',
-        alignItems: 'center'  
+        alignItems: 'center'
     },
-    eloIcon:{
+    eloIcon: {
         width: 150,
-        height: 150       
+        height: 150
     },
-    eloClassification:{   
-        marginTop: 10,   
+    eloClassification: {
+        marginTop: 10,
         textAlign: 'center',
         color: theme.colors.heading.main,
-        fontSize: 24 
+        fontSize: 24
     },
-    eloInfo:{
+    eloInfo: {
         textAlign: 'center',
-        color: theme.colors.heading.secondary 
+        color: theme.colors.heading.secondary
     },
-    playerProfileInfo:{
-        backgroundColor: theme.colors.background.secondary,      
-        borderRadius: 45,
+    playerProfileInfo: {
+        backgroundColor: '#121212',
+        borderRadius: 30,
         width: '100%',
-        height:'65%',       
-        alignItems: 'center'       
-    },   
-    lanesContainer:{
-        flexDirection:'row'
+        height: '51%',
+        alignItems: 'center'
     },
-    laneIcon:{
+    lanesContainer: {
+        flexDirection: 'row'
+    },
+    laneIcon: {
         width: 30,
         height: 30,
         marginHorizontal: 8
     },
-    playerNick:{
+    playerNick: {
         marginTop: 15,
         color: theme.colors.heading.main,
         fontSize: 20,
-        fontWeight: 'bold'     
+        fontWeight: 'bold'
     },
-    playerGeneralInfo:{
+    playerGeneralInfo: {
         color: theme.colors.heading.main,
-        fontSize: 15    
-    }, 
-    hourInfoContainer:{
-        flexDirection:'row',
+        fontSize: 15
+    },
+    hourInfoContainer: {
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center'
     },
-    hourIcon:{
+    hourIcon: {
         marginTop: 5,
         width: 15,
         height: 15
     },
-    hourInfo:{   
-      paddingTop: 4, 
-      marginLeft: 7,
-      color: theme.colors.heading.secondary,
-      fontStyle: 'italic'
+    hourInfo: {
+        paddingTop: 4,
+        marginLeft: 7,
+        color: theme.colors.heading.secondary,
+        fontStyle: 'italic'
     },
-    playerBio:{
+    playerBio: {
         marginTop: 20,
         color: theme.colors.heading.main,
         fontSize: 15,
-        paddingHorizontal: 50 ,
+        paddingHorizontal: 50,
         textAlign: 'justify'
     },
-    matchOptions:{
-        paddingTop: 10,
-        flexDirection: 'row',
-        marginVertical: 20, 
-        alignItems: 'center',    
+    matchOptions: {       
+        flexDirection: 'row',      
+        alignItems: 'center',
         height: '50%'
     },
-    declineIcon:{       
-        marginHorizontal: 80,
+    declineIcon: {
+        marginHorizontal: 30,
         width: 45,
         height: 45
     },
-    likeIcon:{       
-        marginHorizontal: 80,
+    likeIcon: {
+        marginHorizontal: 30,
         width: 60,
-        height: 60         
+        height: 60
     },
 });
