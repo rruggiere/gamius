@@ -3,29 +3,29 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     iconsContainer:{        
-        height: 55,
+        height: '7%',
         flexDirection: 'row',
-        backgroundColor: theme.colors.background.main,
+        backgroundColor: theme.colors.backgroundButton,
         borderRadius: 30,
         justifyContent: 'center',
         alignContent: 'center', 
-        marginTop: -500
+        marginTop: '-50%'
     },
     menuButton:{
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     buttonCenter:{
         width: 75,
         height: 75,     
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: theme.colors.background.main,
+        backgroundColor: theme.colors.backgroundButton,
         borderRadius: 37.5,
-        borderWidth: 2,
-        borderColor: theme.colors.background.secondary,
-        marginTop: -30
+        borderWidth: 5,
+        borderColor: theme.colors.background.main,
+        marginTop: '-5%'
     },
     icon:{
         width: 30,
@@ -36,5 +36,12 @@ export const styles = StyleSheet.create({
         width: 50,
         height: 50,
         opacity: 0.5 
-    }  
+    }, 
+    iconMenu: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: theme.colors.background.main
+    },
 });
