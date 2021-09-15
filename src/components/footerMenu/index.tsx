@@ -33,7 +33,7 @@ export function FooterMenu({ state, navigation }: any) {
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('ProfileSuggest')}
-                activeOpacity={0.9}
+                activeOpacity={1}
                 style={styles.buttonCenter}>
                 <FontAwesomeIcon style={[styles.iconMenu, { opacity: menuFocus(0) }]} icon={faDice} size={37} />
             </TouchableOpacity>
