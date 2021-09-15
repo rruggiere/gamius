@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         marginTop: 59,       
         borderRadius: 18,
         width: '90%',
-        height: '53%',        
+        height: '70%',        
         justifyContent: 'center',
         alignItems: 'center'
     },
