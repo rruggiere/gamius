@@ -1,28 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     View,
     Text,
     Image,
-    StatusBar    
+    StatusBar
 } from 'react-native';
 import { styles } from './styles';
 import { ButtonMenu } from '../../components/ButtonMenu';
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from '../../stacks/MainStack/rootStackParams';
+import { ConfirmationModal } from '../../components/confirmationModal';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../../stacks/MainStack/rootStackParams';
 
 import userDefault from '../../assets/userDefault.png'
 import settingsIcon from '../../assets/settings.png'
 import editProfile from '../../assets/edit.png'
 import shareApp from '../../assets/share.png'
 import logout from '../../assets/logout.png'
+import { State } from 'react-native-gesture-handler';
 
 type userMenuScreenProp = StackNavigationProp<RootStackParamList, 'UserMenu'>;
 
 export function UserMenu() {
     const navigation = useNavigation<userMenuScreenProp>();
+    const [logOutConfrimationVisible, setLogoutConfirmation] = useState(false);
+
     return (
-        <View style={styles.container}>               
+        <View style={styles.container}>
+            <ConfirmationModal
+                textModal="Deseja sair?"
+                firstOptionText="Sim"
+                secondOptionText="Não"
+                isVisible={logOutConfrimationVisible}              
+                onClose={() => setLogoutConfirmation(false)}  
+                onPress={() => navigation.navigate('SignIn')}              
+            />
             <View style={styles.containerProfilePicture}>
                 <Image style={styles.profilePicture} source={userDefault} />
             </View>
@@ -33,18 +45,18 @@ export function UserMenu() {
                     title="account settings"
                     source={settingsIcon}
                 />
-                 <ButtonMenu
+                <ButtonMenu
                     title="edit profile"
                     source={editProfile}
-                />  
-                 <ButtonMenu
+                />
+                <ButtonMenu
                     title="share app"
                     source={shareApp}
                 />
-                 <ButtonMenu
+                <ButtonMenu
                     title="log out"
                     source={logout}
-                    onPress = {() => navigation.navigate('SignIn')}
+                    onPress={() => setLogoutConfirmation(true)}
                 />
             </View>
         </View>
