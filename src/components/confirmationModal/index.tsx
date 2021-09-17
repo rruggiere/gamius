@@ -53,6 +53,5 @@ export function ConfirmationModal({ textModal, firstOptionText, secondOptionText
                 </View>
             </View>
         </Modal>
-
     );
 }
