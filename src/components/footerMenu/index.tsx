@@ -5,11 +5,6 @@ import {
     TouchableOpacity
 } from 'react-native';
 import { styles } from './styles';
-import userWhite from '../../assets/userWhite.png';
-import twoGamepad from '../../assets/two-players.png';
-import gamePad from '../../assets/gamePad.png';
-import message from '../../assets/message.png';
-import logout from '../../assets/logout.png';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faUser, faBars, faComments, faGamepad, faDice } from '@fortawesome/free-solid-svg-icons';
 

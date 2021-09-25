@@ -14,7 +14,7 @@ export function MainTab() {
     tabBar={props=> <FooterMenu {...props} />}     
     screenOptions={{headerShown: false}}>
       <BottomTab.Screen name="ProfileSuggest" component={ProfileSuggest} />
-      <BottomTab.Screen name="UserMenu" component={UserMenu} />
+      {/* <BottomTab.Screen name="UserMenu" component={UserMenu} /> */}
     </BottomTab.Navigator>
   );
 }

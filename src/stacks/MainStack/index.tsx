@@ -5,6 +5,7 @@ import { theme } from "../../global/styles/theme";
 //Pages
 import SignIn from '../../screens/signin';
 import SignUp from '../../screens/signUp';
+import { UserMenu } from '../../screens/userMenu';
 import ForgotPassword from '../../screens/forgotPassword';
 import EmailVerification from '../../screens/emailVerification';
 import ResetPassword from '../../screens/resetPassword';
@@ -22,6 +23,7 @@ export function MainStack() {
         <Stack.Screen  name="ForgotPassword" component={ForgotPassword} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
         <Stack.Screen  name="EmailVerification" component={EmailVerification} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
         <Stack.Screen  name="ResetPassword" component={ResetPassword} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
+        <Stack.Screen  name="UserMenu" component={UserMenu} options={{headerShown: false}}/>  
     </Stack.Navigator>
   );
 }
