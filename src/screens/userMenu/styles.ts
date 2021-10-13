@@ -36,9 +36,88 @@ export const styles = StyleSheet.create({
         borderColor: theme.colors.backgroundButton,
         backgroundColor: theme.colors.background.secondary,
         width: '100%',
-        height: '80%',
+        height: '90%',
         marginTop: 30,         
         paddingTop: 25,
         paddingHorizontal: 15        
-    }
+    },
+    optionMenu:{        
+        borderRadius: 12,
+        width: '100%',
+        height: 70,
+        backgroundColor: theme.colors.background.main,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    optionMenuIcon:{                
+        borderRadius: 12,
+        width: '25%',
+        height: '100%',
+        backgroundColor: theme.colors.background.main,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    MenuIcon:{         
+        width: '45%',
+        height: '60%',
+        backgroundColor: theme.colors.background.secondary,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: '20%',       
+        borderRadius: 37.5,
+    },
+    iconMenu: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'white',
+        opacity: 0.9,
+        height: '100%'
+    },
+    optionMenuText: {  
+        width: '65%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        textAlignVertical: 'center',
+        marginLeft: '-2%',
+        height: '100%'
+    },
+    textMenu: {
+        color: 'white',
+        fontSize: 16,
+        opacity: 0.7
+    },
+    optionMenuGo: {
+        width: '20%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        textAlignVertical: 'center',
+        marginRight: '10%',
+        color: 'white',
+        opacity: 0.8,
+        height: '100%'
+    },
+    optionMenuMarginTop: {
+        marginTop: '5%'
+    },
+    optionMenuCenter: {
+        borderRadius: 0
+    },
+    optionMenuRadiusBottomCenter: {
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0
+    },
+    optionMenuRadiusTopCenter: {
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 0
+    },
+    optionMenuBorderTopCenter: {        
+        borderTopWidth: 0.5,        
+        borderTopColor: theme.colors.heading.secondary
+    },
+    optionMenuBorderBottomCenter: {        
+        borderBottomWidth: 0.5,        
+        borderBottomColor: theme.colors.heading.secondary
+    },
 });

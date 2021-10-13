@@ -12,7 +12,7 @@ export function MainTab() {
     <BottomTab.Navigator
     tabBar={props=> <FooterMenu {...props} />}     
     screenOptions={{headerShown: false}}>
-      <BottomTab.Screen name="ProfileSuggest" component={ProfileSuggest} />    
+      <BottomTab.Screen name="ProfileSuggest" component={ProfileSuggest} />
     </BottomTab.Navigator>
   );
 }
