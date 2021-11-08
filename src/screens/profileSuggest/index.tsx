@@ -8,7 +8,6 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { styles } from './styles';
 
-
 import diamondPic from '../../assets/diamond.png';
 import midIcon from '../../assets/middleLane.png';
 import suppIcon from '../../assets/supportLane.png';

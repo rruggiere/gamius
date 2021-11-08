@@ -139,7 +139,7 @@ export function UserMenu() {
                     </View>
                 </View> 
                 {/* Exit */}
-                <TouchableOpacity onPress = {() => navigation.navigate('SignIn')}>
+                <TouchableOpacity onPress = {() => setLogoutConfirmation(true)}>
                 <View style={[styles.optionMenu, styles.optionMenuMarginTop]} >
                     <View style={styles.optionMenuIcon}>
                         <View style={styles.MenuIcon}>

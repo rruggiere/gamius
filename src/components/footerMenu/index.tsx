@@ -38,7 +38,7 @@ export function FooterMenu({ state, navigation }: any) {
                 <FontAwesomeIcon style={[styles.iconMenu, { opacity: menuFocus(0) }]} icon={faDice} size={37} />
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => goTo('NotImplemented')}
+                onPress={() => goTo('Chat')}
                 style={styles.menuButton}>
                 <FontAwesomeIcon style={[styles.iconMenu, { opacity: menuFocus(3) }]} icon={faComments} size={33} />
             </TouchableOpacity>
