@@ -11,19 +11,21 @@ import EmailVerification from '../../screens/emailVerification';
 import ResetPassword from '../../screens/resetPassword';
 import { RootStackParamList } from './rootStackParams';
 import { MainTab } from '../MainTab';
+import { ConversationScreen } from '../../screens/conversation';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function MainStack() {
-  return (    
-    <Stack.Navigator initialRouteName="SignIn" screenOptions={{headerStyle: {backgroundColor: theme.colors.background.main,}, headerTintColor:  theme.colors.background.main}}>
-        <Stack.Screen  name="SignIn" component={SignIn} options={{headerShown: false}}/>        
-        <Stack.Screen  name="MainTab" component={MainTab} options={{headerShown: false}}/>  
-        <Stack.Screen  name="SignUp" component={SignUp} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
-        <Stack.Screen  name="ForgotPassword" component={ForgotPassword} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
-        <Stack.Screen  name="EmailVerification" component={EmailVerification} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
-        <Stack.Screen  name="ResetPassword" component={ResetPassword} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
-        <Stack.Screen  name="UserMenu" component={UserMenu} options={{headerShown: false}}/>  
+  return (
+    <Stack.Navigator initialRouteName="SignIn" screenOptions={{ headerStyle: { backgroundColor: theme.colors.background.main, }, headerTintColor: theme.colors.background.main }}>
+      <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} />
+      <Stack.Screen name="MainTab" component={MainTab} options={{ headerShown: false }} />
+      <Stack.Screen name="SignUp" component={SignUp} options={{ headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false }} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPassword} options={{ headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false }} />
+      <Stack.Screen name="EmailVerification" component={EmailVerification} options={{ headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false }} />
+      <Stack.Screen name="ResetPassword" component={ResetPassword} options={{ headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false }} />
+      <Stack.Screen name="UserMenu" component={UserMenu} options={{ headerShown: false }} />
+      <Stack.Screen name='ConversationScreen' component={ConversationScreen} options={{ headerShown: false }} />    
     </Stack.Navigator>
   );
 }
