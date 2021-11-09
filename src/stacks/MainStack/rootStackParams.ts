@@ -6,4 +6,12 @@ export type RootStackParamList = {
     EmailVerification: undefined;
     ForgotPassword: undefined;
     ResetPassword: undefined;
+    ChangePassword: undefined;
+    ChangeEmail: undefined;
+    ChangeEmailVerification: undefined;
+    DisableAccount: undefined;
+    EditPerfil: undefined;
+    FilterProfile: undefined;
+    GameProfile: undefined;
+    BlockedUsers: undefined;
 };

@@ -13,31 +13,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 
-type resetPasswordScreenProp = StackNavigationProp<RootStackParamList, 'ResetPassword'>;
+type disableAccountScreenProp = StackNavigationProp<RootStackParamList, 'DisableAccount'>;
 
-export default function ResetPassword() {
-  const navigation = useNavigation<resetPasswordScreenProp>();
+export default function ChangePassword() {
+  const navigation = useNavigation<disableAccountScreenProp>();
 
   return (
     <View style={styles.container}>
       <View style={styles.resetPassword}>
-        <Text style={styles.text}>Redefinir Senha</Text>
-      </View>       
+        <Text style={styles.text}>Desativar Conta</Text>
+      </View>  
       <View style={styles.containerInfo}>
-          <Text style={styles.textInfo}>Agora insira sua nova senha e a confirme abaixo</Text>
-        </View>
+        <Text style={styles.textInfo}>Insira sua senha para desativar a conta</Text>
+      </View>
       <View style={styles.resetPasswordInputs}>
         <View style={styles.containerTextInput}>
-          <TextInput style={styles.textInsideInputIcon} placeholder="Senha" placeholderTextColor='#6f7075' secureTextEntry={true}/>           
-          <FontAwesomeIcon style={styles.iconTextInput} icon={ faEyeSlash }/>
-        </View>
-        <View style={styles.containerTextInput}>
-          <TextInput style={styles.textInsideInputIcon} placeholder="Confirme a Senha" placeholderTextColor='#6f7075' secureTextEntry={true}/>           
+          <TextInput style={styles.textInsideInputIcon} placeholder="Senha Atual" placeholderTextColor='#6f7075' secureTextEntry={true}/>           
           <FontAwesomeIcon style={styles.iconTextInput} icon={ faEyeSlash }/>
         </View>
         <View style={ styles.resetPasswordActions }>
           <TouchableOpacity style={ styles.resetPasswordButton } onPress={() => navigation.navigate('SignIn')}>
-             <Text style={styles.textInput}>Redefinir Senha</Text> 
+             <Text style={styles.textInput}>Desativar Conta</Text> 
             </TouchableOpacity>
         </View> 
       </View>

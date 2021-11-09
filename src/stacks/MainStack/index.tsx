@@ -11,6 +11,14 @@ import EmailVerification from '../../screens/emailVerification';
 import ResetPassword from '../../screens/resetPassword';
 import { RootStackParamList } from './rootStackParams';
 import { MainTab } from '../MainTab';
+import ChangePassword from '../../screens/changePassword';
+import ChangeEmail from '../../screens/changeEmail';
+import ChangeEmailVerification from '../../screens/changeEmailVerification';
+import DisableAccount from '../../screens/disableAccount';
+import { EditPerfil } from '../../screens/userProfile';
+import FilterProfile from '../../screens/filterProfileSuggest';
+import GameProfile from '../../screens/gameProfile';
+import BlockedUsers from '../../screens/blockedUsers';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -24,6 +32,14 @@ export function MainStack() {
         <Stack.Screen  name="EmailVerification" component={EmailVerification} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
         <Stack.Screen  name="ResetPassword" component={ResetPassword} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
         <Stack.Screen  name="UserMenu" component={UserMenu} options={{headerShown: false}}/>  
+        <Stack.Screen  name="ChangePassword" component={ChangePassword} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
+        <Stack.Screen  name="ChangeEmail" component={ChangeEmail} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
+        <Stack.Screen  name="ChangeEmailVerification" component={ChangeEmailVerification} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
+        <Stack.Screen  name="DisableAccount" component={DisableAccount} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
+        <Stack.Screen  name="EditPerfil" component={EditPerfil} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
+        <Stack.Screen  name="FilterProfile" component={FilterProfile} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
+        <Stack.Screen  name="GameProfile" component={GameProfile} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
+        <Stack.Screen  name="BlockedUsers" component={BlockedUsers} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
     </Stack.Navigator>
   );
 }
