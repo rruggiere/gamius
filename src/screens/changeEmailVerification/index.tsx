@@ -43,8 +43,8 @@ export default function EmailVerification() {
           <Text style={styles.infoTimer}>Reenviar em 0:30</Text>
         </View>
         <View style={ styles.emailVerificationActions }>
-          <TouchableOpacity style={ styles.emailVerificationButton } onPress={() => navigation.navigate('ResetPassword')}>
-             <Text style={styles.textInput}>Próximo</Text> 
+          <TouchableOpacity style={ styles.emailVerificationButton } onPress={() => navigation.navigate('UserMenu')}>
+             <Text style={styles.textInput}>Atualiza Email</Text> 
             </TouchableOpacity>
         </View>   
       </View>

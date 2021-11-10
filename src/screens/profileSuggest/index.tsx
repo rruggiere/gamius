@@ -25,10 +25,10 @@ export function ProfileSuggest() {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress = {() => navigation.navigate('Chat')}>
-            <View style={styles.optionMenuIcon}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faSlidersH } size={ 30 } />
-            </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
+                <View style={styles.optionMenuIcon}>
+                    <FontAwesomeIcon style={styles.iconMenu} icon={faSlidersH} size={30} />
+                </View>
             </TouchableOpacity>
             <View style={styles.containerCard}>
                 <View style={styles.containerProfilePicture}>
@@ -37,7 +37,7 @@ export function ProfileSuggest() {
                 <View style={styles.containerProfileName}>
                     <Text style={styles.textUserName}>Rodriguinho Silva, 25</Text>
                 </View>
-                <View style={styles.containerProfileDescription}>                    
+                <View style={styles.containerProfileDescription}>
                     <Text style={styles.textUserDescription}>"Olá, estou procurando alguém para jogar solo duo!"</Text>
                 </View>
                 {/* <View style={styles.containerTitleSection}>
@@ -50,43 +50,43 @@ export function ProfileSuggest() {
                         <View><Image style={styles.eloIcon} source={diamondPic} /></View>
                         <View><Text style={styles.textDescriptionElo}>Diamente 1</Text></View>
                     </View>
-                    <View style={styles.containerEloFlex}>                        
+                    <View style={styles.containerEloFlex}>
                         <View><Text style={styles.textTitleElo}>Flex</Text></View>
                         <View ><Image style={styles.eloIcon} source={diamondPic} /></View>
                         <View><Text style={styles.textDescriptionElo}>Diamante 4</Text></View>
                     </View>
-                    <View style={styles.containerRoles}>                        
+                    <View style={styles.containerRoles}>
                         <Image style={styles.laneIcon} source={midIcon} />
                         <Image style={styles.laneIcon} source={suppIcon} />
                     </View>
                 </View>
-                <View style={styles.containerTimeSection}>                    
+                <View style={styles.containerTimeSection}>
                     <View style={[styles.containerTitleSection]}>
                         <Text style={styles.textTitleSection}>Horários</Text>
                     </View>
                     <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={styles.iconMenuTime} icon={ faCloudSun } size={ 30 } />
+                        <FontAwesomeIcon style={styles.iconMenuTime} icon={faCloudSun} size={30} />
                         <Text style={styles.textTitleTime}>Manhã</Text>
                     </View>
                     <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={styles.iconMenuTime} icon={ faSun } size={ 30 } />
+                        <FontAwesomeIcon style={styles.iconMenuTime} icon={faSun} size={30} />
                         <Text style={styles.textTitleTime}>Tarde</Text>
                     </View>
                     <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faMoon } size={ 30 } />
+                        <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={faMoon} size={30} />
                         <Text style={[styles.textTitleTime, styles.selectedTime]}>Noite</Text>
                     </View>
                     <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faCloudMoon } size={ 30 } />
+                        <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={faCloudMoon} size={30} />
                         <Text style={[styles.textTitleTime, styles.selectedTime]}>Madrugada</Text>
                     </View>
                 </View>
                 <View style={styles.containerVoteSection}>
-                    <View style={styles.containerVote}>               
-                        <View style={styles.iconMenuVoteSectionDecline}><FontAwesomeIcon style={[styles.iconMenuVote]} icon={ faTimesCircle } size={ 60 } /></View>        
+                    <View style={styles.containerVote}>
+                        <View style={styles.iconMenuVoteSectionDecline}><FontAwesomeIcon style={[styles.iconMenuVote]} icon={faTimesCircle} size={60} /></View>
                     </View>
                     <View style={styles.containerVote}>
-                        <View style={styles.iconMenuVoteSectionAccept}><FontAwesomeIcon style={[styles.iconMenuVote]} icon={ faCheckCircle } size={ 60 } /></View>
+                        <View style={styles.iconMenuVoteSectionAccept}><FontAwesomeIcon style={[styles.iconMenuVote]} icon={faCheckCircle} size={60} /></View>
                     </View>
                 </View>
             </View>

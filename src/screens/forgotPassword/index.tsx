@@ -11,10 +11,10 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../../stacks/MainStack/rootStackParams';
 
 
-type signUpScreenProp = StackNavigationProp<RootStackParamList, 'SignUp'>;
+type forgotPasswordScreenProp = StackNavigationProp<RootStackParamList, 'ForgotPassword'>;
 
-export default function SignUp() {
-  const navigation = useNavigation<signUpScreenProp>();
+export default function ForgotPassword() {
+  const navigation = useNavigation<forgotPasswordScreenProp>();
 
   return (
     <View style={styles.container}>
