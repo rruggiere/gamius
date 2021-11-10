@@ -2,23 +2,23 @@ import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
-    iconsContainer:{        
+    iconsContainer: {
         height: '7%',
         flexDirection: 'row',
         backgroundColor: theme.colors.backgroundButton,
         borderRadius: 30,
         justifyContent: 'center',
-        alignContent: 'center', 
+        alignContent: 'center',
         marginTop: '-50%'
     },
-    menuButton:{
+    menuButton: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    buttonCenter:{
+    buttonCenter: {
         width: 75,
-        height: 75,     
+        height: 75,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: theme.colors.backgroundButton,
@@ -27,16 +27,16 @@ export const styles = StyleSheet.create({
         borderColor: theme.colors.background.main,
         marginTop: '-5%'
     },
-    icon:{
+    icon: {
         width: 30,
-        height: 30,    
-        opacity: 0.5 
-    },     
-    iconCenter:{
+        height: 30,
+        opacity: 0.5
+    },
+    iconCenter: {
         width: 50,
         height: 50,
-        opacity: 0.5 
-    }, 
+        opacity: 0.5
+    },
     iconMenu: {
         flex: 1,
         flexDirection: 'row',

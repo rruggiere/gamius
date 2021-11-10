@@ -11,10 +11,10 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../../stacks/MainStack/rootStackParams';
 
 
-type emailVerificationScreenProp = StackNavigationProp<RootStackParamList, 'EmailVerification'>;
+type signUpScreenProp = StackNavigationProp<RootStackParamList, 'SignUp'>;
 
-export default function EmailVerification() {
-  const navigation = useNavigation<emailVerificationScreenProp>();
+export default function SignUp() {
+  const navigation = useNavigation<signUpScreenProp>();
 
   return (
     <View style={styles.container}>

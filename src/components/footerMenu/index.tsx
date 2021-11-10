@@ -1,50 +1,51 @@
 import React from 'react';
 import {
     View,
-    Image,
     TouchableOpacity
 } from 'react-native';
 import { styles } from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faUser, faBars, faComments, faGamepad, faDice } from '@fortawesome/free-solid-svg-icons';
 
-export function FooterMenu({ state, navigation }: any) {  
+export function FooterMenu({ state, navigation }: any) {
     const goTo = (screenName: string) => {
         navigation.navigate(screenName);
     }
+    const menuFocus = (index: number) => {
+        if (state.index === index)
+            return 1;
+        else
+            return 0.8;
+    }
+
     return (
         <View style={styles.iconsContainer}>
             <TouchableOpacity
                 onPress={() => goTo('UserMenu')}
                 activeOpacity={0.7}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faBars } size={ 28 } />
-                {/* <Image style={[styles.icon, {opacity : state.index === 1? 1 : 0.5}]} source={userWhite} /> */}
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity: menuFocus(1) }]} icon={faBars} size={28} />
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('NotImplemented')}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faGamepad } size={ 33 } />
-                {/* <Image style={[styles.icon, {opacity : state.index === 2? 1 : 0.5}]} source={gamePad} /> */}
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity: menuFocus(2) }]} icon={faGamepad} size={33} />
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('ProfileSuggest')}
-                activeOpacity={0.9}
+                activeOpacity={1}
                 style={styles.buttonCenter}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faDice } size={ 37 } />
-                {/* <Image style={[styles.iconCenter, {opacity : state.index === 0? 1 : 0.5}]} source={twoGamepad} /> */}
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity: menuFocus(0) }]} icon={faDice} size={37} />
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => goTo('NotImplemented')}               
+                onPress={() => goTo('Chat')}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faComments } size={ 33 } />
-                {/* <Image style={[styles.icon, {opacity : state.index === 3? 1 : 0.5}]} source={message} /> */}
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity: menuFocus(3) }]} icon={faComments} size={33} />
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('NotImplemented')}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faUser } size={ 28 } />       
-                {/* <Image style={[styles.icon, {opacity : state.index === 4? 1 : 0.5}]} source={logout} /> */}
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity: menuFocus(4) }]} icon={faUser} size={28} />
             </TouchableOpacity>
         </View>
     );

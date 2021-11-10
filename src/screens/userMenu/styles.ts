@@ -74,21 +74,6 @@ export const styles = StyleSheet.create({
         color: 'white',
         opacity: 0.9,
         height: '100%'
-    },   
-    editPerfilContainer: {
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        marginTop: '15%',
-        marginLeft: '87%'
-    } ,
-    iconEditPerfil: {
-        // flexDirection: 'row',
-        // justifyContent: 'center',
-        // alignItems: 'center',
-        color: 'white',
-        opacity: 0.9,
-        height: '100%',
     },
     optionMenuText: {  
         width: '65%',

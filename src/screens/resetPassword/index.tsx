@@ -10,13 +10,13 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../../stacks/MainStack/rootStackParams';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faEyeSlash, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 
-type resetPasswordScreenProp = StackNavigationProp<RootStackParamList, 'ResetPassword'>;
+type signUpScreenProp = StackNavigationProp<RootStackParamList, 'SignUp'>;
 
-export default function ResetPassword() {
-  const navigation = useNavigation<resetPasswordScreenProp>();
+export default function SignUp() {
+  const navigation = useNavigation<signUpScreenProp>();
 
   return (
     <View style={styles.container}>
