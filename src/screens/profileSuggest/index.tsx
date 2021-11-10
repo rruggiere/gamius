@@ -29,7 +29,7 @@ export function ProfileSuggest() {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress = {() => navigation.navigate('FilterProfile')}>
+            <TouchableOpacity onPress = {() => navigation.navigate('UserMenu')}>
             <View style={styles.optionMenuIcon}>
                 <FontAwesomeIcon style={styles.iconMenu} icon={ faSlidersH } size={ 30 } />
             </View>
