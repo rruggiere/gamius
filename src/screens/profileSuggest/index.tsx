@@ -17,10 +17,6 @@ import userDefault from '../../assets/userDefault.png'
 import diamondPic from '../../assets/diamond.png';
 import midIcon from '../../assets/middleLane.png';
 import suppIcon from '../../assets/supportLane.png';
-import declineIcon from '../../assets/declined.png';
-import likeIcon from '../../assets/gamePad.png';
-import hourIcon from '../../assets/clock.png';
-import moreOptions from '../../assets/more-options.png';
 
 type ProfileSuggestProps = BottomTabNavigationProp<RootTabParamList, 'ProfileSuggest'>
 
