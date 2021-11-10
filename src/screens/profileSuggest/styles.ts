@@ -88,9 +88,9 @@ export const styles = StyleSheet.create({
         fontSize: 15
     },
     hourInfoContainer: {
-        flexDirection: 'row',
+        flexDirection: 'row',   
+        alignItems: 'center',
         justifyContent: 'center',
-        alignItems: 'center'
     },
     hourIcon: {
         marginTop: 5,
