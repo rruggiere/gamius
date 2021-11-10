@@ -12,15 +12,12 @@ import { RootTabParamList } from '../../stacks/MainTab/rootTabParams';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faSlidersH, faCloudSun, faSun, faMoon, faCloudMoon, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-import userDefault from '../../assets/userDefault.png'
+import sivir_icon from '../../assets/sivir_profileicon.png'
 
-import diamondPic from '../../assets/diamond.png';
-import midIcon from '../../assets/middleLane.png';
-import suppIcon from '../../assets/supportLane.png';
-import declineIcon from '../../assets/declined.png';
-import likeIcon from '../../assets/gamePad.png';
-import hourIcon from '../../assets/clock.png';
-import moreOptions from '../../assets/more-options.png';
+import platIcon from '../../assets/platinumRank.png';
+import goldIcon from '../../assets/goldRank.png';
+import adcIcon from '../../assets/adcLane.png';
+import topIcon from '../../assets/topLane.png';
 
 type ProfileSuggestProps = BottomTabNavigationProp<RootTabParamList, 'ProfileSuggest'>
 
@@ -29,39 +26,35 @@ export function ProfileSuggest() {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress = {() => navigation.navigate('UserMenu')}>
+            <TouchableOpacity onPress={() => navigation.navigate('FilterProfile')}>
             <View style={styles.optionMenuIcon}>
                 <FontAwesomeIcon style={styles.iconMenu} icon={ faSlidersH } size={ 30 } />
             </View>
             </TouchableOpacity>
             <View style={styles.containerCard}>
                 <View style={styles.containerProfilePicture}>
-                    <Image style={styles.profilePicture} source={userDefault} />
+                    <Image style={styles.profilePicture} source={sivir_icon} />
                 </View>
                 <View style={styles.containerProfileName}>
-                    <Text style={styles.textUserName}>Rodriguinho Silva, 25</Text>
+                    <Text style={styles.textUserName}>Guilherme Mendes, 22</Text>
                 </View>
                 <View style={styles.containerProfileDescription}>                    
-                    <Text style={styles.textUserDescription}>"Olá, estou procurando alguém para jogar solo duo!"</Text>
+                    <Text style={styles.textUserDescription}>"Jogo de top e adc, porém estou procurando um suporte para jogar duo!"</Text>
                 </View>
-                {/* <View style={styles.containerTitleSection}>
-                    <View style={styles.lineTitleSection}></View>
-                    <Text style={styles.textTitleSection}>ELO</Text>
-                </View> */}
                 <View style={styles.containerEloSection}>
                     <View style={styles.containerEloSolo}>
                         <View><Text style={styles.textTitleElo}>Solo</Text></View>
-                        <View><Image style={styles.eloIcon} source={diamondPic} /></View>
-                        <View><Text style={styles.textDescriptionElo}>Diamente 1</Text></View>
+                        <View><Image style={styles.eloIcon} source={platIcon} /></View>
+                        <View><Text style={styles.textDescriptionElo}>Platina 4</Text></View>
                     </View>
                     <View style={styles.containerEloFlex}>                        
                         <View><Text style={styles.textTitleElo}>Flex</Text></View>
-                        <View ><Image style={styles.eloIcon} source={diamondPic} /></View>
-                        <View><Text style={styles.textDescriptionElo}>Diamante 4</Text></View>
+                        <View ><Image style={styles.eloIcon} source={goldIcon} /></View>
+                        <View><Text style={styles.textDescriptionElo}>Ouro 3</Text></View>
                     </View>
                     <View style={styles.containerRoles}>                        
-                        <Image style={styles.laneIcon} source={midIcon} />
-                        <Image style={styles.laneIcon} source={suppIcon} />
+                        <Image style={styles.laneIcon} source={adcIcon} />
+                        <Image style={styles.laneIcon} source={topIcon} />
                     </View>
                 </View>
                 <View style={styles.containerTimeSection}>                    
@@ -73,16 +66,16 @@ export function ProfileSuggest() {
                         <Text style={styles.textTitleTime}>Manhã</Text>
                     </View>
                     <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={styles.iconMenuTime} icon={ faSun } size={ 30 } />
-                        <Text style={styles.textTitleTime}>Tarde</Text>
+                        <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faSun } size={ 30 } />
+                        <Text style={[styles.textTitleTime, , styles.selectedTime]}>Tarde</Text>
                     </View>
                     <View style={styles.subContainerTimeSection}>
                         <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faMoon } size={ 30 } />
                         <Text style={[styles.textTitleTime, styles.selectedTime]}>Noite</Text>
                     </View>
                     <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faCloudMoon } size={ 30 } />
-                        <Text style={[styles.textTitleTime, styles.selectedTime]}>Madrugada</Text>
+                        <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faCloudMoon } size={ 30 } />
+                        <Text style={[styles.textTitleTime]}>Madrugada</Text>
                     </View>
                 </View>
                 <View style={styles.containerVoteSection}>
@@ -94,35 +87,6 @@ export function ProfileSuggest() {
                     </View>
                 </View>
             </View>
-
-            {/* <View style={styles.playerGameInfo}>
-                <View style={styles.eloContainer}>
-                    <Image style={styles.eloIcon} source={diamondPic} />
-                    <Text style={styles.eloClassification}>DIAMANTE 4</Text>
-                    <Text style={styles.eloInfo}>50 PDL | Taxa de vitória 58%</Text>
-                </View>
-                <View style={styles.lanesContainer}>
-                    <Image style={styles.laneIcon} source={midIcon} />
-                    <Image style={styles.laneIcon} source={suppIcon} />
-                </View>
-            </View>
-            <View style={styles.playerProfileInfo}>
-                <Text style={styles.playerNick}>FAKER</Text>
-                <Text style={styles.playerGeneralInfo}>Lee Sang-hyeok, 25</Text>
-                <View style={styles.hourInfoContainer}>
-                    <Image style={styles.hourIcon} source={hourIcon} />
-                    <Text style={styles.hourInfo}>18h às 23h</Text>
-                </View>
-                <Text style={styles.playerBio}>Recém contratado pela Pain buscando duos para a soloQ já que o brtt não joga.</Text>
-                <View style={styles.matchOptions}>
-                    <TouchableOpacity>
-                        <Image style={styles.declineIcon} source={declineIcon} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image style={styles.likeIcon} source={likeIcon} />
-                    </TouchableOpacity>
-                </View>
-            </View> */}
         </View>
     );
 }

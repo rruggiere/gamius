@@ -260,10 +260,10 @@ export const styles = StyleSheet.create({
     },   
     textTitleTime:{
         color: theme.colors.heading.main,
-        fontSize: 14,
-        fontWeight: '800',
+        fontSize: 12,
+        fontWeight: '600',
         textAlign: 'center',
-        letterSpacing: 3,
+        letterSpacing: 1,
         margin: 0,
         padding: '2.2%',
         opacity: 0.5,
@@ -272,6 +272,8 @@ export const styles = StyleSheet.create({
         alignContent: 'center',
         alignItems: 'center',
         paddingTop: '3%',
+        width: '25%',
+        height: 70,
     },    
     iconMenuTime: {
         flexDirection: 'row',

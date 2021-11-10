@@ -3,12 +3,15 @@ import {
     Text,
     View,
     TouchableOpacity,
-    TouchableOpacityProps
+    TouchableOpacityProps,
+    Image
 } from 'react-native';
 import { styles } from '../conversationPreview/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { MatchIcon } from '../../components/matchIcon';
 import { IconDefinition, faCircle } from '@fortawesome/free-solid-svg-icons';
+
+import nocturne_icon from '../../assets/nocturne_iconprofile.png';
 
 type Props = TouchableOpacityProps & {
     icon: IconDefinition;
@@ -19,21 +22,20 @@ type Props = TouchableOpacityProps & {
 
 export function ConversationPreview({ icon, userName, messageNotRead, lastMessage, onPress }: Props) {
     return (
-        <TouchableOpacity style={styles.conversationPreview}
-            activeOpacity={0.7}
-            onPress={onPress}
-            >
-            <MatchIcon icon={icon} userName="" />
-            <View style={styles.textContainer}>
-                <Text style={[styles.defaulText, { fontWeight: "bold" }]}>
-                    {userName}
-                </Text>
-                <Text style={styles.defaulText}>
-                    {lastMessage}
-                </Text>
-            </View>
-            <View style={styles.scrollIcons}>
-                {messageNotRead ? <FontAwesomeIcon style={styles.icons} icon={faCircle} size={10} color='orange' /> : null}
+        <TouchableOpacity activeOpacity={0.7} onPress={onPress} >
+            <View style={styles.optionMenu}>
+                <View style={styles.optionMenuIcon}>
+                <View style={styles.containerProfilePicture}>
+                    <Image style={styles.profilePicture} source={nocturne_icon} />
+                </View>
+                </View>
+                <View style={styles.optionMenuText}>
+                    <Text style={styles.textMenu}>{userName}</Text>
+                    <View style={styles.containerMensage}><Text style={styles.textMensage}>{lastMessage}</Text></View>
+                </View>
+                <View style={styles.optionMenuGo}>
+                    {messageNotRead ? <FontAwesomeIcon style={styles.iconMenu} icon={ faCircle } size={ 10 } color='orange' /> : null}
+                </View>
             </View>
         </TouchableOpacity>
 

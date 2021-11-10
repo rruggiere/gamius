@@ -37,12 +37,13 @@ export const styles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 2,        
         borderRadius: 100,
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
         alignContent: 'center',
         alignItems: 'center' ,
         padding: '5%',
         width: 135,
-        height: 135
+        height: 135,
+        overflow: 'hidden'
     },
     containerProfilePictureBorder: {
         width: 140,
@@ -54,13 +55,17 @@ export const styles = StyleSheet.create({
         position: 'absolute',
         marginTop: -2,
         backgroundColor: theme.colors.background.secondary,
+        overflow: 'hidden'
     },
     profilePicture:{
-        width: '100%',
-        height: '100%',  
+        width: '115%',
+        height: '115%',  
         alignContent: 'center',
         alignItems: 'center' ,
         alignSelf:'center',
+        overflow: 'hidden',
+        borderRadius: 150/2,
+        marginTop: '-4%'
     },
     optionsContainer:{        
         borderTopWidth: 0.5,
@@ -75,7 +80,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',   
     },
     containerName: {
-        marginLeft: '20%'
+        marginLeft: '10%'
     },
     containerInput: {
         paddingTop: '20%',
@@ -85,7 +90,7 @@ export const styles = StyleSheet.create({
         borderRadius: 11,
         height: 50,
         backgroundColor: theme.colors.background.secondary,
-        marginTop: 18,
+        marginTop: '2%',
         justifyContent: 'center',
         flexDirection: 'row',
         alignItems: 'center'
@@ -151,5 +156,12 @@ export const styles = StyleSheet.create({
         color: 'white',
         opacity: 0.9,
         height: '100%',
-    }
+    },    
+    textTitle: {
+        color: theme.colors.heading.main,
+        fontSize: 16,
+        fontWeight: 'bold',
+        width: '100%',
+        marginTop: '5%'
+    },
 });

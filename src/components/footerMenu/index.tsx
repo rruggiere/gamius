@@ -21,7 +21,7 @@ export function FooterMenu({ state, navigation }: any) {
                 <FontAwesomeIcon style={styles.iconMenu} icon={ faBars } size={ 28 } />      
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => goTo('NotImplemented')}
+                onPress={() => goTo('GameProfile')}
                 style={styles.menuButton}>
                 <FontAwesomeIcon style={styles.iconMenu} icon={ faGamepad } size={ 33 } />      
             </TouchableOpacity>
@@ -37,7 +37,7 @@ export function FooterMenu({ state, navigation }: any) {
                 <FontAwesomeIcon style={styles.iconMenu} icon={ faComments } size={ 33 } />              
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => goTo('NotImplemented')}
+                onPress={() => goTo('EditPerfil')}
                 style={styles.menuButton}>
                 <FontAwesomeIcon style={styles.iconMenu} icon={ faUser } size={ 28 } />      
             </TouchableOpacity>

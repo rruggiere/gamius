@@ -37,7 +37,7 @@ export default function GameProfile() {
         <Text style={styles.textTitle}>Nome do Invocador</Text>
         <View style={styles.containerNickname}>
           <View style={styles.sectionInputNickname}>
-           <TextInput style={styles.textInsideInput} placeholder="RodriguinhoO" placeholderTextColor='#6f7075'/> 
+           <TextInput style={[styles.textInsideInput]} placeholder="iCKzT" placeholderTextColor='#6f7075'/> 
           </View>
           <View style={styles.sectionbuttonEditNickname}>
             <TouchableOpacity style={ styles.editButton } >
@@ -49,7 +49,7 @@ export default function GameProfile() {
       <View style={styles.subContainer}>          
         <Text style={styles.textTitle}>Nota do Jogador</Text>
         <View style={styles.containerDescription}>
-          <TextInput style={styles.textInsideInput} multiline numberOfLines={4} editable maxLength={130} placeholder="Diga algo ao seu respeito" placeholderTextColor='#6f7075'/>
+          <TextInput style={styles.textInsideInput} multiline numberOfLines={4} editable maxLength={130} placeholder="Main sup, buscando atiradores para jogar solo/duo" placeholderTextColor='#6f7075'/>
         </View>
       </View>
       <View style={styles.containerRole}> 
@@ -73,7 +73,7 @@ export default function GameProfile() {
               <Text style={styles.roleTitle}>Atirador</Text>
             </View>
             <View style={styles.roleOption}>
-              <Image style={styles.laneIcon} source={suppIcon_disabled} />
+              <Image style={styles.laneIcon} source={suppIcon} />
               <Text style={styles.roleTitle}>Suporte</Text>
             </View>
           </View>
@@ -92,7 +92,7 @@ export default function GameProfile() {
               <Text style={styles.roleTitle}>Selva</Text>
             </View>
             <View style={styles.roleOption}>
-              <Image style={styles.laneIcon} source={midIcon_disabled} />
+              <Image style={styles.laneIcon} source={midIcon} />
               <Text style={styles.roleTitle}>Meio</Text>
             </View>
             <View style={styles.roleOption}>
@@ -119,8 +119,8 @@ export default function GameProfile() {
                 <Text style={[styles.textTitleTime]}>Tarde</Text>
             </View>
             <View style={styles.subContainerTimeSection}>
-                <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faMoon } size={ 30 } />
-                <Text style={[styles.textTitleTime]}>Noite</Text>
+                <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faMoon } size={ 30 } />
+                <Text style={[styles.textTitleTime, styles.selectedTime]}>Noite</Text>
             </View>
             <View style={styles.subContainerTimeSection}>
                 <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faCloudMoon } size={ 30 } />

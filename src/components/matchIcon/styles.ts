@@ -3,18 +3,15 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     iconContainer:{
-        width: '15%',
-        height: '100%',
-        alignItems: 'center'
+        width: '22%',
+        alignItems: 'center',
+        alignContent: 'center',
+        marginTop: '3%',
     },
     matchIcon: {
-        backgroundColor: theme.colors.background.main,
-        borderRadius: 50,
         width: '100%',
-        height: '90%',
-        justifyContent: 'center',
         alignItems: 'center',
-        marginHorizontal: 3
+        alignContent: 'center',
     },
     icons: {
         flex: 1,
@@ -24,7 +21,25 @@ export const styles = StyleSheet.create({
         color: theme.colors.heading.main
     },
     defaultText: {
-        color: theme.colors.heading.main,        
-        fontSize: 15    
+        color: theme.colors.heading.main, 
+        fontSize: 16, 
+        fontWeight: 'bold',
     },        
+    imageIcon: {
+        borderWidth: 1,        
+        borderRadius: 100,
+        borderColor: 'black',
+        alignContent: 'center',
+        alignItems: 'center' ,
+        padding: '5%',
+        width: 65,
+        height: 65,
+    },
+    matchText: {
+        width: '100%',
+        height: 20,
+        alignContent: 'center',
+        alignItems: 'center' ,
+        marginTop: '2%'
+    },
 });

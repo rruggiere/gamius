@@ -30,7 +30,9 @@ import suppIcon_disabled from '../../assets/supportLane_disabled.png';
 type filterProfileScreenProp = StackNavigationProp<RootStackParamList, 'FilterProfile'>;
 
 export default function FilterProfile() {
+
   const navigation = useNavigation<filterProfileScreenProp>();
+
   const [openMin, setOpenMin] = useState(false);
   const [openMax, setOpenMax] = useState(false);
   const [valueMin, setValueMin] = useState(null);
@@ -45,7 +47,6 @@ export default function FilterProfile() {
     {label: 'Grandmestre', value: 'grandmestre'},
     {label: 'Challenger', value: 'challenger'}
   ]);
-  DropDownPicker.setListMode("FLATLIST");
 
   return (
     <View style={styles.container}>
@@ -79,7 +80,7 @@ export default function FilterProfile() {
               <Text style={styles.roleTitle}>Meio</Text>
             </View>
             <View style={styles.roleOption}>
-              <Image style={styles.laneIcon} source={adcIcon_disabled} />
+              <Image style={styles.laneIcon} source={adcIcon} />
               <Text style={styles.roleTitle}>Atirador</Text>
             </View>
             <View style={styles.roleOption}>
@@ -98,7 +99,7 @@ export default function FilterProfile() {
               <Text style={styles.roleTitle}>Topo</Text>
             </View>
             <View style={styles.roleOption}>
-              <Image style={styles.laneIcon} source={jungleIcon_disabled} />
+              <Image style={styles.laneIcon} source={jungleIcon} />
               <Text style={styles.roleTitle}>Selva</Text>
             </View>
             <View style={styles.roleOption}>
@@ -127,7 +128,7 @@ export default function FilterProfile() {
               setOpen={setOpenMin}
               setValue={setValueMin}
               setItems={setItems}
-              placeholder='Selecione o elo'
+              placeholder='Platina'
               theme="DARK"
             />
           </View>
@@ -144,7 +145,7 @@ export default function FilterProfile() {
               setOpen={setOpenMax}
               setValue={setValueMax}
               setItems={setItems}
-              placeholder='Selecione o elo'
+              placeholder='Diamante'
               theme="DARK"
             />
           </View>
@@ -163,8 +164,8 @@ export default function FilterProfile() {
                 <Text style={[styles.textTitleTime]}>Tarde</Text>
             </View>
             <View style={styles.subContainerTimeSection}>
-                <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faMoon } size={ 30 } />
-                <Text style={[styles.textTitleTime]}>Noite</Text>
+                <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faMoon } size={ 30 } />
+                <Text style={[styles.textTitleTime, styles.selectedTime]}>Noite</Text>
             </View>
             <View style={styles.subContainerTimeSection}>
                 <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faCloudMoon } size={ 30 } />

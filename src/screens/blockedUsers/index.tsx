@@ -15,7 +15,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faDice,faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 
-import userDefault from '../../assets/userDefault.png'
+import kassadin_icon from '../../assets/kassadin_iconprofile.png';
+import zed_icon from '../../assets/zed_iconprofile.png';
 
 
 type blockedUsersScreenProp = StackNavigationProp<RootStackParamList, 'BlockedUsers'>;
@@ -32,23 +33,7 @@ export default function BlockedUsers() {
         <View style={styles.optionMenu}>
             <View style={styles.optionMenuIcon}>
               <View style={styles.containerProfilePicture}>
-                <Image style={styles.profilePicture} source={userDefault} />
-              </View>
-            </View>
-            <View style={styles.optionMenuText}>
-                <Text style={styles.textMenu}>RodriguinhoPai</Text>
-                <View style={styles.containerDate}><Text style={styles.textDateMenu}>10/07/2021</Text></View>
-            </View>
-            <View style={styles.optionMenuGo}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faAngleRight } size={ 20 } />
-            </View>
-        </View> 
-        </TouchableOpacity>
-        <TouchableOpacity>
-        <View style={styles.optionMenu}>
-            <View style={styles.optionMenuIcon}>
-              <View style={styles.containerProfilePicture}>
-                <Image style={styles.profilePicture} source={userDefault} />
+                <Image style={styles.profilePicture} source={zed_icon} />
               </View>
             </View>
             <View style={styles.optionMenuText}>
@@ -64,7 +49,7 @@ export default function BlockedUsers() {
         <View style={styles.optionMenu}>
             <View style={styles.optionMenuIcon}>
               <View style={styles.containerProfilePicture}>
-                <Image style={styles.profilePicture} source={userDefault} />
+                <Image style={styles.profilePicture} source={kassadin_icon} />
               </View>
             </View>
             <View style={styles.optionMenuText}>

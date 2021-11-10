@@ -18,22 +18,22 @@ export function Chat() {
     const navigation = useNavigation<conversationScreenProp>();
 
     return (
-        <View style={styles.chatContainer}>
-            <Text style={[styles.defaulText, { fontWeight: "bold", paddingLeft: 5 }]}>
-                Novos duos
-            </Text>
-            <View style={styles.matchsContainer}>
-                <MatchIcon icon={faUser} userName="Faker" />
+        <View style={styles.container}>
+            <View style={styles.contatinerNewMatches}>                
+                <Text style={styles.textTitle}>Novos Matches:</Text>
+                <View style={styles.contatinerNewMatchesItem}>
+                    <View style={styles.matchsContainer}>
+                        <MatchIcon icon={faUser} userName="Jhonatan" />
+                    </View>
+                </View>
             </View>
-            <View style={styles.conversationsContainer}>
-                <Text style={[styles.defaulText, { fontWeight: "bold", paddingLeft: 5 }]}>
-                    Conversas
-                </Text>
+            <View style={styles.contatinerChat}> 
+                <Text style={styles.textTitle}>Conversas:</Text>
                 <ConversationPreview
                     icon={faUser}
-                    userName="PNG Kami"
-                    messageNotRead={true}
-                    lastMessage="Teste mensagem"
+                    userName="Alexandre"
+                    messageNotRead={false}
+                    lastMessage="Estou te aguardando"
                     onPress = {()=> navigation.navigate('ConversationScreen') }
                 />
             </View>

@@ -88,16 +88,23 @@ export const styles = StyleSheet.create({
         opacity: 0.8,
         height: '100%'
     },
-    profilePicture:{
-        width: 50,
-        height: 50,           
+    profilePicture:{        
+        width: '115%',
+        height: '115%',  
+        alignContent: 'center',
+        alignItems: 'center' ,
+        alignSelf:'center',
+        overflow: 'hidden',
+        borderRadius: 150/2,
+        marginTop: '-8%'           ,
+        marginLeft: '2%',
     },
     containerProfilePicture:{
         borderStyle: 'solid',
         borderWidth: 6,        
         borderRadius: 100,
         borderColor: theme.colors.background.main,
-        backgroundColor: theme.colors.heading.main,
+        // backgroundColor: theme.colors.heading.main,
         alignContent: 'center',
         alignItems: 'center' ,
         padding: '5%',

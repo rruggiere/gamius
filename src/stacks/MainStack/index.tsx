@@ -1,4 +1,5 @@
 import React from 'react';
+import { View, Text, Image } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { theme } from "../../global/styles/theme";
 
@@ -20,8 +21,33 @@ import FilterProfile from '../../screens/filterProfileSuggest';
 import GameProfile from '../../screens/gameProfile';
 import BlockedUsers from '../../screens/blockedUsers';
 import { ConversationScreen } from '../../screens/conversation';
+import { Chat } from '../../screens/chat';
+
+import chatImage from '../../assets/nocturne_iconprofile.png';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+
+function LogoTitle() {
+  return (
+    <View style={{width: '100%', flexDirection: 'row',}}>
+    <Image
+      style={{
+      borderWidth: 1,        
+      borderRadius: 100,
+      borderColor: 'black',
+      alignContent: 'center',
+      alignItems: 'center' ,
+      padding: '5%',
+      width: 45,
+      height: 45,
+      marginTop: '-1%',
+      marginLeft: '2%'}}
+      source={chatImage}
+    />
+    <Text style={{color: theme.colors.heading.main, fontSize: 20, marginLeft: '1%', marginTop:'2%'}}> Alexandre Lott </Text>
+    </View>
+  );
+}
 
 export function MainStack() {
   return (    
@@ -40,7 +66,8 @@ export function MainStack() {
         <Stack.Screen  name="EditPerfil" component={EditPerfil} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
         <Stack.Screen  name="FilterProfile" component={FilterProfile} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
         <Stack.Screen  name="GameProfile" component={GameProfile} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
-        <Stack.Screen name='ConversationScreen' component={ConversationScreen} options={{ headerShown: false }} />
+        <Stack.Screen name='Chat' component={Chat} options={{ headerShown: false }} />
+        <Stack.Screen  name="ConversationScreen" component={ConversationScreen} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false, headerTitle: (props) => <LogoTitle {...props} /> }}/>
         <Stack.Screen  name="BlockedUsers" component={BlockedUsers} options={{headerTintColor: '#fff', headerBackTitleVisible: false, title: '', headerShadowVisible: false}}/>
     </Stack.Navigator>
   );

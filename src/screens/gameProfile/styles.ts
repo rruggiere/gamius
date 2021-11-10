@@ -26,8 +26,9 @@ export const styles = StyleSheet.create({
         width: '100%',
     },
     textInsideInput:{
-        color: theme.colors.heading.main,
-        width: '80%'
+        color: theme.colors.heading.secondary,
+        width: '80%',
+        fontWeight: '600',
     },
     editButton: {        
         alignItems: "center",

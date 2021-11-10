@@ -2,6 +2,55 @@ import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: theme.colors.background.main,
+        alignItems: "center",
+        zIndex: 0,
+    },   
+    text: {
+        color: theme.colors.heading.main,
+        fontSize: 27,
+        fontWeight: 'bold'
+    },
+    contatinerNewMatches: {
+        width: '90%',
+        marginTop: '13%'
+        // borderBottomWidth: 1,
+        // borderBottomColor: theme.colors.background.secondary,
+    },
+    contatinerNewMatchesItem: {
+        width: '100%',
+    },
+    textTitle: {
+        color: theme.colors.heading.main,
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginTop: '3%'        
+    },
+    matchsContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+        flexDirection: 'row',
+        alignSelf: 'flex-start'
+    },
+    contatinerChat: {
+        width: '100%',
+        height: '100%',
+        paddingHorizontal: 15
+    },
+
+
+
+
+
+
+
+
+
+
+    
     defaulText: {
         color: theme.colors.heading.main
     },
@@ -10,12 +59,6 @@ export const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         paddingTop: 40
-    },
-    matchsContainer: {
-        height: '7%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row'    
     },
     conversationsContainer: {
         height: '93%',

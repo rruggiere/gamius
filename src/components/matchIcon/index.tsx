@@ -1,25 +1,30 @@
 import React from 'react';
 import {
     View,
-    Text
+    Text,
+    Image
 } from 'react-native';
 import { styles } from '../matchIcon/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+
+import imagem from '../../assets/Gemstone_Poro_profileicon.png';
 
 type Props = {
     icon: IconDefinition;
     userName: string;
 }
 export function MatchIcon({ icon, userName }: Props) {
+
+
     return (
         <View style={styles.iconContainer}>
             <View style={styles.matchIcon}>
-                <FontAwesomeIcon style={styles.icons} icon={icon} size={28} />
+                <Image style={styles.imageIcon} source={imagem} />
             </View>
-            <Text style={styles.defaultText}>
-                {userName}
-            </Text>
+            <View style={styles.matchText}>
+                <Text style={styles.defaultText}> {userName} </Text>
+            </View>            
         </View>
     );
 }
