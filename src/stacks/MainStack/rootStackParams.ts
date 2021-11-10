@@ -14,4 +14,6 @@ export type RootStackParamList = {
     FilterProfile: undefined;
     GameProfile: undefined;
     BlockedUsers: undefined;
+    ProfileSuggest: undefined;
+    ConversationScreen: undefined;   
 };

@@ -18,33 +18,28 @@ export function FooterMenu({ state, navigation }: any) {
                 onPress={() => goTo('UserMenu')}
                 activeOpacity={0.7}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faBars } size={ 28 } />
-                {/* <Image style={[styles.icon, {opacity : state.index === 1? 1 : 0.5}]} source={userWhite} /> */}
+                <FontAwesomeIcon style={styles.iconMenu} icon={ faBars } size={ 28 } />      
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('NotImplemented')}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faGamepad } size={ 33 } />
-                {/* <Image style={[styles.icon, {opacity : state.index === 2? 1 : 0.5}]} source={gamePad} /> */}
+                <FontAwesomeIcon style={styles.iconMenu} icon={ faGamepad } size={ 33 } />      
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('ProfileSuggest')}
                 activeOpacity={0.9}
                 style={styles.buttonCenter}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faDice } size={ 37 } />
-                {/* <Image style={[styles.iconCenter, {opacity : state.index === 0? 1 : 0.5}]} source={twoGamepad} /> */}
+                <FontAwesomeIcon style={styles.iconMenu} icon={ faDice } size={ 37 } />               
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => goTo('NotImplemented')}               
+                onPress={() => goTo('Chat')}             
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faComments } size={ 33 } />
-                {/* <Image style={[styles.icon, {opacity : state.index === 3? 1 : 0.5}]} source={message} /> */}
+                <FontAwesomeIcon style={styles.iconMenu} icon={ faComments } size={ 33 } />              
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('NotImplemented')}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faUser } size={ 28 } />       
-                {/* <Image style={[styles.icon, {opacity : state.index === 4? 1 : 0.5}]} source={logout} /> */}
+                <FontAwesomeIcon style={styles.iconMenu} icon={ faUser } size={ 28 } />      
             </TouchableOpacity>
         </View>
     );
