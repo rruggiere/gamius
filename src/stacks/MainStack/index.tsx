@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { theme } from "../../global/styles/theme";
 
@@ -24,6 +24,8 @@ import { ConversationScreen } from '../../screens/conversation';
 import { Chat } from '../../screens/chat';
 
 import chatImage from '../../assets/nocturne_iconprofile.png';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -45,6 +47,9 @@ function LogoTitle() {
       source={chatImage}
     />
     <Text style={{color: theme.colors.heading.main, fontSize: 20, marginLeft: '1%', marginTop:'2%'}}> Alexandre Lott </Text>
+    <TouchableOpacity>
+        <FontAwesomeIcon style={{color: 'white', height: '100%', marginTop: '4%', marginLeft: '50%'}} icon={ faEllipsisH } size={ 25 } />
+    </TouchableOpacity>
     </View>
   );
 }
