@@ -10,6 +10,7 @@ import { ConversationPreview } from '../../components/conversationPreview';
 import { RootStackParamList } from '../../stacks/MainStack/rootStackParams';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/core';
+import imagem from '../../assets/Gemstone_Poro_profileicon.png';
 
 type conversationScreenProp = StackNavigationProp<RootStackParamList, 'ConversationScreen'>;
 
@@ -23,7 +24,7 @@ export function Chat() {
                 <Text style={styles.textTitle}>Novos Matches:</Text>
                 <View style={styles.contatinerNewMatchesItem}>
                     <View style={styles.matchsContainer}>
-                        <MatchIcon icon={faUser} userName="Jhonatan" />
+                        <MatchIcon source={imagem} userName="Jhonatan" />
                     </View>
                 </View>
             </View>
