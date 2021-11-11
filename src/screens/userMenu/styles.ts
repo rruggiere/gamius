@@ -34,33 +34,37 @@ export const styles = StyleSheet.create({
     optionsContainer:{        
         borderTopWidth: 0.5,
         borderColor: theme.colors.backgroundButton,
-        backgroundColor: theme.colors.background.secondary,
+        backgroundColor: theme.colors.background.main,
         width: '100%',
         height: '90%',
         marginTop: 30,         
         paddingTop: 25,
         paddingHorizontal: 15        
     },
+    optionMenuFrist:{       
+        marginTop: '0%'
+    },
     optionMenu:{        
         borderRadius: 12,
         width: '100%',
         height: 70,
-        backgroundColor: theme.colors.background.main,
+        backgroundColor: theme.colors.background.secondary,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: '-1%'
     },
     optionMenuIcon:{                
         borderRadius: 12,
         width: '25%',
         height: '100%',
-        backgroundColor: theme.colors.background.main,
+        backgroundColor: theme.colors.background.secondary,
         flexDirection: 'row',
         alignItems: 'center'
     },
     MenuIcon:{         
         width: '45%',
         height: '60%',
-        backgroundColor: theme.colors.background.secondary,
+        backgroundColor: 'rgba(111, 112, 117, 0.2)',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -135,4 +139,17 @@ export const styles = StyleSheet.create({
         borderBottomWidth: 0.5,        
         borderBottomColor: theme.colors.heading.secondary
     },
+    menuFocus: {
+        backgroundColor: theme.colors.backgroundButton,
+    },
+    menuFocusText:{        
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: theme.colors.background.secondary,
+        opacity: 0.9,
+    },
+    menuFocusIcon: {
+        backgroundColor: 'rgba(25, 26, 30, 0.3)',
+    }
 });

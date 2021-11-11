@@ -330,5 +330,9 @@ export const styles = StyleSheet.create({
         left: 0,
         marginLeft: '45%',
         marginTop: '9%'
-    }
+    },
+    imageMenuVote: {
+        width: 75,
+        height: 75,
+    },
 });

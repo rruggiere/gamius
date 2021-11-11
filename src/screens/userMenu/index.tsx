@@ -36,17 +36,17 @@ export function UserMenu() {
                 <ScrollView>
                 {/* Search Players */}
                 <TouchableOpacity onPress = {() => navigation.navigate('MainTab')}>
-                <View style={styles.optionMenu}>
-                    <View style={styles.optionMenuIcon}>
-                        <View style={styles.MenuIcon}>
+                <View style={[styles.optionMenu, styles.optionMenuFrist, styles.menuFocus]}>
+                    <View style={[styles.optionMenuIcon, styles.menuFocus]}>
+                        <View style={[styles.MenuIcon, styles.menuFocusIcon]}>
                             <FontAwesomeIcon style={styles.iconMenu} icon={ faDice } size={ 20 } />
                         </View>
                     </View>
                     <View style={styles.optionMenuText}>
-                        <Text style={styles.textMenu}>Buscar Jogadores</Text>
+                        <Text style={[styles.textMenu]}>Buscar Jogadores</Text>
                     </View>
                     <View style={styles.optionMenuGo}>
-                        <FontAwesomeIcon style={styles.iconMenu} icon={ faAngleRight } size={ 20 } />
+                        <FontAwesomeIcon style={[styles.iconMenu]} icon={ faAngleRight } size={ 20 } />
                     </View>
                 </View> 
                 </TouchableOpacity>
@@ -75,7 +75,7 @@ export function UserMenu() {
                         </View>
                     </View>
                     <View style={[styles.optionMenuText]}>
-                        <Text style={styles.textMenu}>Atualizar Email</Text>
+                        <Text style={styles.textMenu}>Alterar Email</Text>
                     </View>
                     <View style={[styles.optionMenuGo]}>
                         <FontAwesomeIcon style={styles.iconMenu} icon={ faAngleRight } size={ 20 } />
@@ -91,7 +91,7 @@ export function UserMenu() {
                         </View>
                     </View>
                     <View style={[styles.optionMenuText, styles.optionMenuBorderTopCenter]}>
-                        <Text style={styles.textMenu}>Atualizar Senha</Text>
+                        <Text style={styles.textMenu}>Alterar Senha</Text>
                     </View>
                     <View style={[styles.optionMenuGo, styles.optionMenuBorderTopCenter]}>
                         <FontAwesomeIcon style={styles.iconMenu} icon={ faAngleRight } size={ 20 } />

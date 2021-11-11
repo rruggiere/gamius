@@ -12,6 +12,8 @@ import { RootTabParamList } from '../../stacks/MainTab/rootTabParams';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faSlidersH, faCloudSun, faSun, faMoon, faCloudMoon, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
+import accept_icon from '../../assets/button-withdraw-accept.png'
+import over_icon from '../../assets/button-withdraw-over.png'
 import sivir_icon from '../../assets/sivir_profileicon.png'
 
 import platIcon from '../../assets/platinumRank.png';
@@ -80,10 +82,16 @@ export function ProfileSuggest() {
                 </View>
                 <View style={styles.containerVoteSection}>
                     <View style={styles.containerVote}>               
-                        <View style={styles.iconMenuVoteSectionDecline}><FontAwesomeIcon style={[styles.iconMenuVote]} icon={ faTimesCircle } size={ 60 } /></View>        
+                        <View style={styles.iconMenuVoteSectionDecline}>
+                            {/* <FontAwesomeIcon style={[styles.iconMenuVote]} icon={ faTimesCircle } size={ 60 } /> */}
+                            <Image style={styles.imageMenuVote} source={over_icon} />
+                        </View>        
                     </View>
                     <View style={styles.containerVote}>
-                        <View style={styles.iconMenuVoteSectionAccept}><FontAwesomeIcon style={[styles.iconMenuVote]} icon={ faCheckCircle } size={ 60 } /></View>
+                        <View style={styles.iconMenuVoteSectionAccept}>
+                            {/* <FontAwesomeIcon style={[styles.iconMenuVote]} icon={ faCheckCircle } size={ 60 } />                             */}                            
+                            <Image style={styles.imageMenuVote} source={accept_icon} />
+                        </View>
                     </View>
                 </View>
             </View>
