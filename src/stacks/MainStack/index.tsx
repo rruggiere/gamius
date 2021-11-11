@@ -27,7 +27,7 @@ import { Chat } from '../../screens/chat';
 import { Menu, MenuItem, MenuDivider } from 'react-native-material-menu';
 import chatImage from '../../assets/nocturne_iconprofile.png';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisH, faBan, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -65,14 +65,14 @@ function LogoTitle() {
         anchor={
           <TouchableOpacity
             onPress={showMenu}>
-            <FontAwesomeIcon style={{ color: 'white', height: '100%', marginTop: '4%', marginLeft: '49%' }} icon={faEllipsisH} size={25} />
+            <FontAwesomeIcon style={{ color: 'white', height: '100%', marginTop: '4%', marginLeft: '47.2%' }} icon={faEllipsisH} size={25} />
           </TouchableOpacity>
         }
         onRequestClose={hideMenu}
       >
-        <MenuItem onPress={hideMenu}>Bloquear usuário</MenuItem>
+        <MenuItem onPress={hideMenu}>Bloquear</MenuItem>
         <MenuDivider color={theme.colors.background.main} />
-        <MenuItem onPress={hideMenu}>Reportar usuário</MenuItem>
+        <MenuItem onPress={hideMenu}>Reportar</MenuItem>
       </Menu>
 
 
