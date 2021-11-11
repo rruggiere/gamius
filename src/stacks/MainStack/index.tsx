@@ -58,7 +58,9 @@ function LogoTitle() {
       <Menu
         style={
           {
-            backgroundColor: theme.colors.backgroundButton
+            backgroundColor: theme.colors.backgroundButton,
+            marginTop: '4%',
+
           }
         }
         visible={visible}
