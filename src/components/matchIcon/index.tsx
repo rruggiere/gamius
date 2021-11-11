@@ -6,11 +6,11 @@ import {
     ImageProps
 } from 'react-native';
 import { styles } from '../matchIcon/styles';
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 type Props = ImageProps & {
     userName: string;
 }
+
 export function MatchIcon({ source, userName }: Props) {
     return (
         <View style={styles.iconContainer}>

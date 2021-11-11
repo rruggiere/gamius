@@ -18,8 +18,10 @@ import platIcon from '../../assets/platinumRank.png';
 import goldIcon from '../../assets/goldRank.png';
 import adcIcon from '../../assets/adcLane.png';
 import topIcon from '../../assets/topLane.png';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../../stacks/MainStack/rootStackParams';
 
-type ProfileSuggestProps = BottomTabNavigationProp<RootTabParamList, 'ProfileSuggest'>
+type ProfileSuggestProps = StackNavigationProp<RootStackParamList, 'ProfileSuggest'>
 
 export function ProfileSuggest() {
     const navigation = useNavigation<ProfileSuggestProps>();

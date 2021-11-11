@@ -53,8 +53,7 @@ export const styles = StyleSheet.create({
         width: '90%',
     },
     issuerBaloon: {
-        backgroundColor: theme.colors.backgroundButton,
-        opacity: 0.5,
+        backgroundColor: theme.colors.backgroundButton,       
         padding: 10,   
         marginLeft: '5%',
         borderRadius: 5,
@@ -64,8 +63,7 @@ export const styles = StyleSheet.create({
         alignSelf: 'flex-end',
     }, 
     receiverBaloon: {
-        backgroundColor: theme.colors.heading.main,
-        opacity: 0.8,
+        backgroundColor: theme.colors.heading.main,       
         padding: 10,        
         borderRadius: 5,
         marginTop: 7,
@@ -90,8 +88,6 @@ export const styles = StyleSheet.create({
         width: 13,
         height: 13,
         top: '100%',
-        // left: '100%',
-        // marginTop: '1%',
         marginLeft: '50%',
         transform: [{ rotate: '-40deg'}]    
     },
