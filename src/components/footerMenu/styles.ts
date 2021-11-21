@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
         height: '7%',
         flexDirection: 'row',
         backgroundColor: theme.colors.backgroundButton,
-        borderRadius: 30,
+        borderRadius: 15,
         justifyContent: 'center',
         alignContent: 'center', 
         marginTop: '-50%'
@@ -23,9 +23,19 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: theme.colors.backgroundButton,
         borderRadius: 37.5,
-        borderWidth: 5,
+        marginTop: '-4%',
+        padding: '1%',
+    },
+    
+    buttonCenterBorder:{
+        width: 76,
+        height: 76,     
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 37.5,
+        borderWidth: 6,
         borderColor: theme.colors.background.main,
-        marginTop: '-5%'
+        marginTop: '-4%',
     },
     icon:{
         width: 30,

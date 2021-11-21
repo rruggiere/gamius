@@ -28,8 +28,8 @@ export function FooterMenu({ state, navigation }: any) {
             <TouchableOpacity
                 onPress={() => goTo('ProfileSuggest')}
                 activeOpacity={0.9}
-                style={styles.buttonCenter}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faDice } size={ 37 } />               
+                style={[styles.buttonCenter]}>
+                <View style={styles.buttonCenterBorder}><FontAwesomeIcon style={styles.iconMenu} icon={ faDice } size={ 37 } /></View>             
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('Chat')}             
