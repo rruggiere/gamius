@@ -100,7 +100,7 @@ export const styles = StyleSheet.create({
         width: '90%',
     },
     rankDropDown: {
-        marginTop: '5%',
+        marginTop: '5%'        
     },    
     containerTime: {          
         width: '100%',

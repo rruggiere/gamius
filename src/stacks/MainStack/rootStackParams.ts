@@ -17,4 +17,5 @@ export type RootStackParamList = {
     ProfileSuggest: undefined;
     Chat: undefined;   
     ConversationScreen: undefined;   
+    ConversationScreenSecond: undefined;
 };

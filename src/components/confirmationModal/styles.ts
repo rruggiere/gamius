@@ -39,5 +39,9 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.backgroundButton,
         borderTopWidth: 1,
         borderColor: 'black'             
+    },
+    textModal:{
+        textAlign: "justify",
+        margin: 8        
     }
 });

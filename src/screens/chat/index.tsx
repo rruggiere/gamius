@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     View,
-    Text
+    Text,
+    TouchableOpacity
 } from 'react-native';
 import { styles } from '../chat/styles';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +11,7 @@ import { ConversationPreview } from '../../components/conversationPreview';
 import { RootStackParamList } from '../../stacks/MainStack/rootStackParams';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/core';
-import imagem from '../../assets/Gemstone_Poro_profileicon.png';
+import imagem from '../../assets/zed_iconprofile.png';
 
 type conversationScreenProp = StackNavigationProp<RootStackParamList, 'ConversationScreen'>;
 
@@ -23,9 +24,9 @@ export function Chat() {
             <View style={styles.contatinerNewMatches}>                
                 <Text style={styles.textTitle}>Novos Matches:</Text>
                 <View style={styles.contatinerNewMatchesItem}>
-                    <View style={styles.matchsContainer}>
-                        <MatchIcon source={imagem} userName="Jhonatan" />
-                    </View>
+                    <TouchableOpacity  onPress = {()=> navigation.navigate('ConversationScreenSecond')} style={styles.matchsContainer}>
+                        <MatchIcon source={imagem} userName="Reinaldo" />
+                    </TouchableOpacity>
                 </View>
             </View>
             <View style={styles.contatinerChat}> 

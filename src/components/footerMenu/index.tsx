@@ -18,28 +18,28 @@ export function FooterMenu({ state, navigation }: any) {
                 onPress={() => goTo('UserMenu')}
                 activeOpacity={0.7}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faBars } size={ 28 } />      
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity : state.index === 3? 1 : 0.7 }]} icon={ faBars } size={ 28 } />      
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('GameProfile')}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faGamepad } size={ 33 } />      
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity : state.index === 2? 1 : 0.7 }]} icon={ faGamepad } size={ 33 } />      
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('ProfileSuggest')}
                 activeOpacity={0.9}
                 style={[styles.buttonCenter]}>
-                <View style={styles.buttonCenterBorder}><FontAwesomeIcon style={styles.iconMenu} icon={ faDice } size={ 37 } /></View>             
+                <View style={styles.buttonCenterBorder}><FontAwesomeIcon style={[styles.iconMenu, { opacity : state.index === 0? 1 : 0.7 }]} icon={ faDice } size={ 37 } /></View>             
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('Chat')}             
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faComments } size={ 33 } />              
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity : state.index === 1? 1 : 0.7 }]} icon={ faComments } size={ 33 } />              
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => goTo('EditPerfil')}
                 style={styles.menuButton}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faUser } size={ 28 } />      
+                <FontAwesomeIcon style={[styles.iconMenu, { opacity : state.index === 4? 1 : 0.7 }]} icon={ faUser } size={ 28 } />      
             </TouchableOpacity>
         </View>
     );

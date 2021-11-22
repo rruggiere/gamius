@@ -7,12 +7,12 @@ import {
   Image,
 } from 'react-native';
 import { styles } from './styles';
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from '../../stacks/MainStack/rootStackParams';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../../stacks/MainStack/rootStackParams';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faCloudSun,faSun,faMoon,faCloudMoon } from '@fortawesome/free-solid-svg-icons';
+import { faCloudSun, faSun, faMoon, faCloudMoon } from '@fortawesome/free-solid-svg-icons';
 
 
 import topIcon from '../../assets/topLane.png';
@@ -38,14 +38,14 @@ export default function FilterProfile() {
   const [valueMin, setValueMin] = useState(null);
   const [valueMax, setValueMax] = useState(null);
   const [items, setItems] = useState([
-    {label: 'Ferro', value: 'ferro'},
-    {label: 'Prata', value: 'prata'},
-    {label: 'Ouro', value: 'ouro'},    
-    {label: 'Platina', value: 'platina'},
-    {label: 'Diamante', value: 'diamante'},
-    {label: 'Mestre', value: 'mestre'},
-    {label: 'Grandmestre', value: 'grandmestre'},
-    {label: 'Challenger', value: 'challenger'}
+    { label: 'Ferro', value: 'ferro' },
+    { label: 'Prata', value: 'prata' },
+    { label: 'Ouro', value: 'ouro' },
+    { label: 'Platina', value: 'platina' },
+    { label: 'Diamante', value: 'diamante' },
+    { label: 'Mestre', value: 'mestre' },
+    { label: 'Grandmestre', value: 'grandmestre' },
+    { label: 'Challenger', value: 'challenger' }
   ]);
 
   return (
@@ -54,20 +54,20 @@ export default function FilterProfile() {
       <View style={styles.containerFilterRank}>
         <View style={[styles.filterRankButton, styles.marginLeft]}>
           <TouchableOpacity style={[styles.rankButton, styles.rankButtonLeft]}>
-            <Text style={styles.textInput}>Ranked Solo</Text> 
+            <Text style={styles.textInput}>Ranked Solo</Text>
           </TouchableOpacity>
         </View>
         <View style={[styles.filterRankButton, styles.marginRight]}>
           <TouchableOpacity style={[styles.rankButton, styles.rankButtonRight, styles.rankButtonDeselected]}  >
-            <Text style={styles.textInput}>Ranked Flex</Text> 
+            <Text style={styles.textInput}>Ranked Flex</Text>
           </TouchableOpacity>
         </View>
       </View>
-      <View style={styles.containerRole}> 
+      <View style={styles.containerRole}>
         <View style={styles.containerRoleSection}>
           <Text style={styles.textTitle}>1° Posição:</Text>
           <View style={styles.roleOptionSection}>
-            <View style={styles.roleOption}>                                  
+            <View style={styles.roleOption}>
               <Image style={styles.laneIcon} source={topIcon_disabled} />
               <Text style={styles.roleTitle}>Topo</Text>
             </View>
@@ -80,26 +80,26 @@ export default function FilterProfile() {
               <Text style={styles.roleTitle}>Meio</Text>
             </View>
             <View style={styles.roleOption}>
-              <Image style={styles.laneIcon} source={adcIcon} />
+              <Image style={styles.laneIcon} source={adcIcon_disabled} />
               <Text style={styles.roleTitle}>Atirador</Text>
             </View>
             <View style={styles.roleOption}>
-              <Image style={styles.laneIcon} source={suppIcon_disabled} />
+              <Image style={styles.laneIcon} source={suppIcon} />
               <Text style={styles.roleTitle}>Suporte</Text>
             </View>
           </View>
         </View>
       </View>
-      <View style={styles.containerRole}> 
+      <View style={styles.containerRole}>
         <View style={styles.containerRoleSection}>
           <Text style={styles.textTitle}>2° Posição:</Text>
           <View style={styles.roleOptionSection}>
-            <View style={styles.roleOption}>                                  
-              <Image style={styles.laneIcon} source={topIcon_disabled} />
+            <View style={styles.roleOption}>
+              <Image style={styles.laneIcon} source={topIcon} />
               <Text style={styles.roleTitle}>Topo</Text>
             </View>
             <View style={styles.roleOption}>
-              <Image style={styles.laneIcon} source={jungleIcon} />
+              <Image style={styles.laneIcon} source={jungleIcon_disabled} />
               <Text style={styles.roleTitle}>Selva</Text>
             </View>
             <View style={styles.roleOption}>
@@ -118,7 +118,7 @@ export default function FilterProfile() {
         </View>
       </View>
       <View style={styles.containerRank}>
-        <View style={styles.containerRankSection}>          
+        <View style={styles.containerRankSection}>
           <Text style={styles.textTitle}>Rank Minímo:</Text>
           <View style={styles.rankDropDown}>
             <DropDownPicker
@@ -128,14 +128,14 @@ export default function FilterProfile() {
               setOpen={setOpenMin}
               setValue={setValueMin}
               setItems={setItems}
-              placeholder='Platina'
+              placeholder='Ouro'
               theme="DARK"
             />
           </View>
         </View>
       </View>
       <View style={styles.containerRank}>
-        <View style={styles.containerRankSection}>          
+        <View style={styles.containerRankSection}>
           <Text style={styles.textTitle}>Rank Maxímo:</Text>
           <View style={styles.rankDropDown}>
             <DropDownPicker
@@ -145,40 +145,40 @@ export default function FilterProfile() {
               setOpen={setOpenMax}
               setValue={setValueMax}
               setItems={setItems}
-              placeholder='Diamante'
-              theme="DARK"
+              placeholder='Platina'
+              theme="DARK"                    
             />
           </View>
         </View>
       </View>
       <View style={styles.containerTime}>
         <View style={styles.containerTimeSection}>
-          <Text style={styles.textTitle}>Horários:</Text>  
+          <Text style={styles.textTitle}>Horários:</Text>
           <View style={styles.timeOptionSection}>
             <View style={styles.subContainerTimeSection}>
-                <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faCloudSun } size={ 30 } />
-                <Text style={[styles.textTitleTime]}>Manhã</Text>
+              <FontAwesomeIcon style={[styles.iconMenuTime]} icon={faCloudSun} size={30} />
+              <Text style={[styles.textTitleTime]}>Manhã</Text>
             </View>
             <View style={styles.subContainerTimeSection}>
-                <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faSun } size={ 30 } />
-                <Text style={[styles.textTitleTime]}>Tarde</Text>
+              <FontAwesomeIcon style={[styles.iconMenuTime]} icon={faSun} size={30} />
+              <Text style={[styles.textTitleTime]}>Tarde</Text>
             </View>
             <View style={styles.subContainerTimeSection}>
-                <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faMoon } size={ 30 } />
-                <Text style={[styles.textTitleTime, styles.selectedTime]}>Noite</Text>
+              <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={faMoon} size={30} />
+              <Text style={[styles.textTitleTime, styles.selectedTime]}>Noite</Text>
             </View>
             <View style={styles.subContainerTimeSection}>
-                <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faCloudMoon } size={ 30 } />
-                <Text style={[styles.textTitleTime]}>Madrugada</Text>
+              <FontAwesomeIcon style={[styles.iconMenuTime]} icon={faCloudMoon} size={30} />
+              <Text style={[styles.textTitleTime]}>Madrugada</Text>
             </View>
           </View>
-        </View>   
-      </View>      
-      <View style={ styles.buttonActions }>
-        <TouchableOpacity style={ styles.filterButton } onPress={() => navigation.navigate('MainTab')}>
-          <Text style={styles.textInput}>Buscar</Text> 
+        </View>
+      </View>
+      <View style={styles.buttonActions}>
+        <TouchableOpacity style={styles.filterButton} onPress={() => navigation.navigate('MainTab')}>
+          <Text style={styles.textInput}>Buscar</Text>
         </TouchableOpacity>
-      </View> 
+      </View>
     </View>
   );
 }

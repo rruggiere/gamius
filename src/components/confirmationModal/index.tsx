@@ -27,7 +27,7 @@ export function ConfirmationModal({ textModal, firstOptionText, secondOptionText
             <View style={styles.container}>
                 <View style={styles.modalWindow}>
                     <View style={styles.modalTitle}>
-                        <Text>
+                        <Text style={styles.textModal}>
                             {textModal}
                         </Text>
                     </View>

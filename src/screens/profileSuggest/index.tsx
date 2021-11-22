@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Text,
     View,
@@ -22,81 +22,33 @@ import adcIcon from '../../assets/adcLane.png';
 import topIcon from '../../assets/topLane.png';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../stacks/MainStack/rootStackParams';
+import { FirstScreen } from '../../components/renderLikeScreens/FirstScreen';
+import { SecondScreen } from '../../components/renderLikeScreens/SecondScreen';
+import { ThirdScreen } from '../../components/renderLikeScreens/ThirdScreen';
+import { ConfirmationModal } from '../../components/confirmationModal';
 
 type ProfileSuggestProps = StackNavigationProp<RootStackParamList, 'ProfileSuggest'>
 
 export function ProfileSuggest() {
     const navigation = useNavigation<ProfileSuggestProps>();
-
-    return (
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('FilterProfile')}>
-            <View style={styles.optionMenuIcon}>
-                <FontAwesomeIcon style={styles.iconMenu} icon={ faSlidersH } size={ 30 } />
-            </View>
-            </TouchableOpacity>
-            <View style={styles.containerCard}>
-                <View style={styles.containerProfilePicture}>
-                    <Image style={styles.profilePicture} source={sivir_icon} />
-                </View>
-                <View style={styles.containerProfileName}>
-                    <Text style={styles.textUserName}>Guilherme Mendes, 22</Text>
-                </View>
-                <View style={styles.containerProfileDescription}>                    
-                    <Text style={styles.textUserDescription}>"Jogo de top e adc, porém estou procurando um suporte para jogar duo!"</Text>
-                </View>
-                <View style={styles.containerEloSection}>
-                    <View style={styles.containerEloSolo}>
-                        <View><Text style={styles.textTitleElo}>Solo</Text></View>
-                        <View><Image style={styles.eloIcon} source={platIcon} /></View>
-                        <View><Text style={styles.textDescriptionElo}>Platina 4</Text></View>
-                    </View>
-                    <View style={styles.containerEloFlex}>                        
-                        <View><Text style={styles.textTitleElo}>Flex</Text></View>
-                        <View ><Image style={styles.eloIcon} source={goldIcon} /></View>
-                        <View><Text style={styles.textDescriptionElo}>Ouro 3</Text></View>
-                    </View>
-                    <View style={styles.containerRoles}>                        
-                        <Image style={styles.laneIcon} source={adcIcon} />
-                        <Image style={styles.laneIcon} source={topIcon} />
-                    </View>
-                </View>
-                <View style={styles.containerTimeSection}>                    
-                    <View style={[styles.containerTitleSection]}>
-                        <Text style={styles.textTitleSection}>Horários</Text>
-                    </View>
-                    <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={styles.iconMenuTime} icon={ faCloudSun } size={ 30 } />
-                        <Text style={styles.textTitleTime}>Manhã</Text>
-                    </View>
-                    <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faSun } size={ 30 } />
-                        <Text style={[styles.textTitleTime, , styles.selectedTime]}>Tarde</Text>
-                    </View>
-                    <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={[styles.iconMenuTime, styles.selectedTime]} icon={ faMoon } size={ 30 } />
-                        <Text style={[styles.textTitleTime, styles.selectedTime]}>Noite</Text>
-                    </View>
-                    <View style={styles.subContainerTimeSection}>
-                        <FontAwesomeIcon style={[styles.iconMenuTime]} icon={ faCloudMoon } size={ 30 } />
-                        <Text style={[styles.textTitleTime]}>Madrugada</Text>
-                    </View>
-                </View>
-                <View style={styles.containerVoteSection}>
-                    <View style={styles.containerVote}>               
-                        <View style={styles.iconMenuVoteSectionDecline}>
-                            {/* <FontAwesomeIcon style={[styles.iconMenuVote]} icon={ faTimesCircle } size={ 60 } /> */}
-                            <Image style={styles.imageMenuVote} source={over_icon} />
-                        </View>        
-                    </View>
-                    <View style={styles.containerVote}>
-                        <View style={styles.iconMenuVoteSectionAccept}>
-                            {/* <FontAwesomeIcon style={[styles.iconMenuVote]} icon={ faCheckCircle } size={ 60 } />                             */}                            
-                            <Image style={styles.imageMenuVote} source={accept_icon} />
-                        </View>
-                    </View>
-                </View>
-            </View>
+    const [shouldShowFirst, setShouldShowFirst] = useState(true); 
+    const [shouldShowSecond, setShouldShowSecond] = useState(false); 
+    const [shouldShowThird, setShouldShowThird] = useState(false); 
+    const [logOutConfrimationVisible, setLogoutConfirmation] = useState(false);
+    
+    return (     
+        <View style={[{width: '100%'}, {height: '100%'}]}>        
+        <ConfirmationModal
+                textModal="Você encontrou um duo! Gostaria de iniciar uma conversa com Reinaldo?"
+                firstOptionText="Sim"
+                secondOptionText="Não"
+                isVisible={logOutConfrimationVisible}              
+                onClose={() => { setLogoutConfirmation(false); setShouldShowThird(true); setShouldShowSecond(false);}}  
+                onPress={() => navigation.navigate('SignIn')}              
+            />
+           { shouldShowFirst ? (<FirstScreen visibleState={()=> { setShouldShowFirst(false); setShouldShowSecond(true) }} />) : null }   
+           { shouldShowSecond ? (<SecondScreen visibleState={()=> { setLogoutConfirmation(true) }} />) : null }   
+           { shouldShowThird ? (<ThirdScreen visibleState={()=> {} } />) : null }            
         </View>
     );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     View,
     Text,
@@ -15,13 +15,24 @@ import { faEnvelope, faAngleRight, faSignOutAlt, faUserEdit, faLockOpen, faBan, 
 
 import supportIcon from '../../assets/support_profileicon.png';
 import { ScrollView } from 'react-native-gesture-handler';
+import { ConfirmationModal } from '../../components/confirmationModal';
 
 type userMenuScreenProp = StackNavigationProp<RootStackParamList, 'UserMenu'>;
 
 export function UserMenu() {
     const navigation = useNavigation<userMenuScreenProp>();
+    const [logOutConfrimationVisible, setLogoutConfirmation] = useState(false);
+    
     return (
         <View style={styles.container}>  
+        <ConfirmationModal
+                textModal="Deseja sair?"
+                firstOptionText="Sim"
+                secondOptionText="Não"
+                isVisible={logOutConfrimationVisible}              
+                onClose={() => setLogoutConfirmation(false)}  
+                onPress={() => navigation.navigate('SignIn')}              
+            />
             <View style={styles.editPerfilContainer}>
                 <TouchableOpacity onPress = {() => navigation.navigate('EditPerfil')}>
                     <FontAwesomeIcon style={styles.iconEditPerfil} icon={ faPencilAlt } size={ 25 } />
@@ -131,7 +142,7 @@ export function UserMenu() {
                 </View> 
                 </TouchableOpacity>
                 {/* Exit */}
-                <TouchableOpacity onPress = {() => navigation.navigate('SignIn')}>
+                <TouchableOpacity onPress={() => setLogoutConfirmation(true)}>
                 <View style={[styles.optionMenu, styles.optionMenuMarginTop]} >
                     <View style={styles.optionMenuIcon}>
                         <View style={styles.MenuIcon}>
