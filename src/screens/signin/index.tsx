@@ -49,7 +49,7 @@ export default function SignIn() {
               <TextInput style={styles.textLogin} placeholder="Usuário" placeholderTextColor='#6f7075' />
             </View>
             <View style={styles.containerTextInput}>
-              <TextInput style={styles.textInsideInputIcon} placeholder="Senha" placeholderTextColor='#6f7075' />
+              <TextInput secureTextEntry={true} style={styles.textInsideInputIcon} placeholder="Senha" placeholderTextColor='#6f7075' />
               <FontAwesomeIcon style={styles.iconTextInput} icon={faEyeSlash} />
             </View>
             <View style={styles.signinActions}>
